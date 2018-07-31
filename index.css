@@ -1,0 +1,40 @@
+header {
+  height: 85px;
+  background-color: #B92228;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.logo-div {
+  padding-top: 20px;
+}
+
+.logo-div img {
+  height: 25px;
+}
+
+.logo-div p {
+  font-size: .7rem;
+  color: #ddd;
+  font-weight: lighter;
+  margin-top: 10px;
+}
+
+.menu {
+  text-align: right;
+  padding-top: 30px;
+}
+
+.menu li {
+  display: inline-block;
+  margin-left: 50px;
+  font-weight: lighter;
+}
+
+.menu li a {
+  color: #eee;
+}
