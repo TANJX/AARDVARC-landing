@@ -186,3 +186,12 @@ header .container {
 .faq-one .a {
   width: 60%;
 }
+
+footer {
+  height: 250px;
+  background-color: #B92228;
+}
+
+footer .logo-div {
+  padding-top: 30px;
+}
