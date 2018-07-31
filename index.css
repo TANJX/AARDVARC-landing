@@ -1,5 +1,9 @@
 /* Created by Mars on Jul 31 */
 
+.inner-container {
+  margin: 0 80px;
+}
+
 /* HEADER */
 
 header {
@@ -138,4 +142,47 @@ header .container {
 
 .card img {
   border-radius: 0;
+}
+
+/* CREATORS */
+
+.people {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.person img {
+  width: 150px;
+  border-radius: 100%;
+  margin-bottom: 35px;
+}
+
+.person .name {
+  margin: 0;
+  font-weight: bolder;
+  text-align: right;
+}
+
+.person .info {
+  font-style: italic;
+  text-align: right;
+  font-size: .7rem;
+}
+
+/* FAQ */
+
+.faq-one {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.faq-one .q {
+  margin-right: 50px;
+  font-weight: bold;
+}
+
+.faq-one .a {
+  width: 60%;
 }
