@@ -52,6 +52,7 @@ header .container {
 .hero {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
   margin-bottom: 50px;
 }
 
@@ -92,6 +93,7 @@ header .container {
 
 .btn-outline {
   color: #B92228;
+  background-color: white;
   border: 1px solid #B92228;
 }
 
