@@ -75,7 +75,7 @@ header .container {
 }
 
 .hero .right img {
-  height: 450px;
+  width: 450px;
 }
 
 .btn {
@@ -196,4 +196,89 @@ footer {
 
 footer .logo-div {
   padding-top: 30px;
+}
+
+@media screen and (max-width: 991px) {
+  header .menu {
+    display: none;
+  }
+
+  .hero {
+    display: block;
+
+  }
+
+  .hero .right img {
+    width: 100%;
+  }
+
+  .inner-container {
+    margin: 0;
+  }
+
+  .features .card {
+    margin: 0 5px;
+  }
+
+}
+
+
+@media screen and (max-width: 767px) {
+
+  .quote {
+    padding: 30px 0 50px;
+    margin: 0 15px;
+    width: auto;
+  }
+
+  .features .cards {
+    margin: 0 5px;
+    display: block;
+  }
+
+  .features .card {
+    width: 100%;
+    margin: 25px auto;
+  }
+
+  .people {
+    margin-top: 0px;
+    display: block;
+  }
+
+  .person {
+    max-width: 200px;
+    margin: 25px auto;
+    text-align: center;
+  }
+
+  .person img {
+    margin: 0 auto;
+    width: 125px;
+    margin-bottom: 10px;
+  }
+
+  .person .name {
+    margin: 0;
+    text-align: center;
+  }
+
+  .person .info {
+    font-size: .7rem;
+    text-align: center;
+  }
+
+  .faq-one {
+    display: block;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .faq-one .q {
+    margin-right: 0px;
+  }
+
+  .faq-one .a {
+    width: 100%;
+  }
 }
