@@ -91,10 +91,27 @@ header .container {
   color: white;
 }
 
+.btn-fill:hover {
+  background-color: #ac0a11;
+}
+
+.btn-fill:active {
+  background-color: #6d0409;
+}
+
 .btn-outline {
   color: #B92228;
   background-color: white;
   border: 1px solid #B92228;
+}
+
+.btn-outline:hover {
+  background-color: #ffebec;
+}
+
+.btn-outline:active {
+  background-color: #ac0a11;
+  color: white;
 }
 
 /* QUOTE */
@@ -113,9 +130,11 @@ header .container {
 }
 
 .quote .content {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+  text-align: justify;
+  list-style: square;
 }
 
 /* FEATURES */
@@ -192,7 +211,6 @@ header .container {
 .preview .show {
   border: 1px solid #ccc;
 }
-
 
 /* CREATORS */
 
