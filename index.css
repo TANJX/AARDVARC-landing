@@ -238,6 +238,14 @@ header .container {
   font-size: .7rem;
 }
 
+.carousel-control-prev-icon {
+  background-image: url(img/prev.svg);
+}
+
+.carousel-control-next-icon {
+  background-image: url(img/next.svg);
+}
+
 /* FAQ */
 
 .faq-one {
