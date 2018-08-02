@@ -146,6 +146,54 @@ header .container {
   border-radius: 0;
 }
 
+/* PREVIEW */
+
+.preview .controls {
+  margin: 0 auto;
+  text-align: center;
+  margin: 25px 0;
+}
+
+.preview .controls .btn-group {
+  overflow: hidden;
+}
+
+.preview .controls .btn:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+.preview .controls .btn:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+.preview .controls .btn {
+  width: 125px;
+  background-color: white;
+  border: 1px solid #B92228;
+  color: #B92228;
+  font-size: .8rem;
+  padding: 5px 0;
+}
+
+.preview .controls .btn:hover {
+  background-color: #ffebec;
+}
+
+.preview .controls .btn:active {
+  background-color: #ac0a11;
+  color: white;
+}
+
+.preview .controls .btn.selected {
+  background-color: #B92228;
+  color: white;
+}
+
+.preview .show {
+  border: 1px solid #ccc;
+}
+
+
 /* CREATORS */
 
 .people {
