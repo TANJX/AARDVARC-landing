@@ -22,10 +22,10 @@
       </div>
       <div class="menu">
         <ul>
-          <li><a href="#">Product</a></li>
-          <li><a href="#">Demo</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">News</a></li>
+          <li><a href="#">Syallbus</a></li>
+          <li><a href="#">Management</a></li>
+          <li><a href="#">Report</a></li>
+          <li><a href="#">Creators</a></li>
         </ul>
       </div>
     </div>
@@ -66,21 +66,31 @@
         <img class="card-img-top" src="//unsplash.it/500/200" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Syllabus</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+          <ul class="content">
+            <li>manage and centralize syllabi </li>
+            <li>streamline the review of syllabi </li>
+          </ul>
         </div>
       </div>
       <div class="card">
         <img class="card-img-top" src="//unsplash.it/500/200" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Management</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+          <ul class="content">
+            <li>improve curricular and programmatic assessment </li>
+            <li>address faculty workloads</li>
+            <li>facilitate accreditation review</li>
+          </ul>
         </div>
       </div>
       <div class="card">
         <img class="card-img-top" src="//unsplash.it/500/200" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Report</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+          <ul class="content">
+            <li>enhance reporting available to senior leadership</li>
+            <li>improve the overall efficiency of academic and business operations</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -101,11 +111,14 @@
           <div class="carousel-item active" group="1">
             <img class="d-block w-100" src="img/editor-landing.png" alt="First slide">
           </div>
-          <div class="carousel-item" group="2">
+          <div class="carousel-item" group="1">
             <img class="d-block w-100" src="img/editor-courseinfo.png" alt="Second slide">
           </div>
-          <div class="carousel-item" group="3">
+          <div class="carousel-item" group="1">
             <img class="d-block w-100" src="img/editor-grade.png" alt="Third slide">
+          </div>
+          <div class="carousel-item" group="3">
+            <img class="d-block w-100" src="img/report-1.png" alt="Third slide">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
@@ -193,7 +206,8 @@
 
     $('.preview .controls div button').click(function() {
       var group = $(this).attr('group');
-      var index = $('.preview .controls div button').index(this);
+      var index = $('.preview .carousel-inner [group="' + group + '"]').index();
+      console.log(group + " " + index);
       $('#carouselControls').carousel(index);
     });
   </script>
