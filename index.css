@@ -4,6 +4,10 @@
   margin: 0 80px;
 }
 
+.wrapper {
+  background-color: #f5f5f5;
+}
+
 /* HEADER */
 
 header {
@@ -141,7 +145,7 @@ header .container {
 
 .section-title {
   text-align: center;
-  margin: 60px 0 40px;
+  padding: 60px 0 40px;
   font-weight: normal;
 }
 
@@ -220,14 +224,53 @@ header .container {
 
 .preview .show {
   border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item:hover .info {
+  opacity: 0;
+  transition: .3s;
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+  position: absolute;
+}
+
+.show .info {
+  position: absolute;
+  z-index: 100;
+  display: inline-block;
+  height: 200px;
+  width: 240px;
+  background-color: rgba(20, 20, 20, 0.8);
+  padding: 20px;
+  color: white;
+  font-size: .8rem;
+  transition: .3s;
+}
+
+.show .info.left {
+  bottom: 5%;
+  left: 10%;
+}
+
+.show .info.right {
+  bottom: 5%;
+  right: 10%;
 }
 
 /* CREATORS */
 
 .people {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 50px;
 }
 
 .person img {
