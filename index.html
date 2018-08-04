@@ -17,15 +17,15 @@
   <header class="clearfix">
     <div class="container">
       <div class="logo-div">
-        <img src="img/logo-red.svg">
+        <img src="img/logo-white.svg">
         <p>We are awesome. Some important words can be put here.</p>
       </div>
       <div class="menu">
         <ul>
-          <li><a href="#">Syallbus</a></li>
-          <li><a href="#">Management</a></li>
-          <li><a href="#">Report</a></li>
-          <li><a href="#">Creators</a></li>
+          <li><a href="syallbus.html">Syallbus</a></li>
+          <li><a href="management.html">Management</a></li>
+          <li><a href="report.html">Report</a></li>
+          <li><a href="creators.html">Creators</a></li>
         </ul>
       </div>
     </div>
@@ -35,7 +35,7 @@
     <div class="left">
       <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elitveniam</h2>
       <div class="buttons">
-        <button type="button" class="btn btn-fill">DEMO</button>
+        <button type="button" class="btn btn-fill" onclick="contact();">CONTACT US</button>
         <button type="button" class="btn btn-outline">LEARN MORE</button>
       </div>
     </div>
@@ -70,6 +70,7 @@
             <li>manage and centralize syllabi </li>
             <li>streamline the review of syllabi </li>
           </ul>
+          <button type="button" class="btn btn-outline" onclick="location.href='syallbus.html'">LEARN MORE</button>
         </div>
       </div>
       <div class="card">
@@ -81,6 +82,7 @@
             <li>address faculty workloads</li>
             <li>facilitate accreditation review</li>
           </ul>
+          <button type="button" class="btn btn-outline" onclick="location.href='management.html'">LEARN MORE</button>
         </div>
       </div>
       <div class="card">
@@ -91,6 +93,7 @@
             <li>enhance reporting available to senior leadership</li>
             <li>improve the overall efficiency of academic and business operations</li>
           </ul>
+          <button type="button" class="btn btn-outline" onclick="location.href='report.html'">LEARN MORE</button>
         </div>
       </div>
     </div>
@@ -184,10 +187,28 @@
     </div>
   </div>
 
+  <div class="contact container">
+    <div class="inner-container">
+      <h3 class="">Interested in a Demo?</h3>
+      <button type="button" class="btn btn-fill" onclick="contact();">CONTACT US</button>
+    </div>
+  </div>
+
   <footer>
-    <div class="container logo-div">
-      <img src="img/logo-red.svg">
-      <p>We are awesome. Some important words can be put here.</p>
+    <div class="container ">
+      <div class="logos">
+        <div class="left logo-div">
+          <img src="img/logo-red.svg">
+          <p>We are awesome. Some important words can be put here.</p>
+        </div>
+        <div class="right">
+          <img src="img/aca-logo.png">
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Developed at the University of Southern California School of Pharmacy.</p>
+        <p>AARDVARC© is a product of ACADOINFORMATICS. Copyright AARDVARC© 2018. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
@@ -210,6 +231,10 @@
       console.log(group + " " + index);
       $('#carouselControls').carousel(index);
     });
+
+    function contact() {
+      location.href = 'mailto:aardvarc@usc.edu';
+    }
   </script>
 </body>
 
