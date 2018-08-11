@@ -1,106 +1,9 @@
 /* Created by Mars on Jul 31 */
 
-$primary-color: #B92228;
-
-.inner-container {
-  margin: 0 80px;
-}
-
-.wrapper {
-  background-color: #f5f5f5;
-}
-
-.section-title {
-  text-align: center;
-  padding: 60px 0 40px;
-  font-weight: normal;
-}
-
-.btn {
-  border-radius: 0;
-  font-size: .7rem;
-  padding: 7px 0;
-  width: 90px;
-  text-align: center;
-}
-
-.copyright-sign {
-  font-size: .6em;
-  display: inline-block;
-  transform: translateY(-1em);
-}
-
-.btn-fill {
-  background-color: $primary-color;
-  color: white;
-
-  &:hover {
-    background-color: #ac0a11;
-  }
-
-  &:active {
-    background-color: #6d0409;
-  }
-}
-
-.btn-outline {
-  color: $primary-color;
-  background-color: white;
-  border: 1px solid $primary-color;
-
-  &:hover {
-    background-color: #ffebec;
-  }
-
-  &:active {
-    background-color: #ac0a11;
-    color: white;
-  }
-}
-
-// HEADER 
-header {
-  height: 85px;
-  background-color: $primary-color;
-
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-}
-
-.logo-div {
-  padding-top: 20px;
-
-  img {
-    height: 25px;
-  }
-
-  p {
-    font-size: .7rem;
-    max-width: 300px;
-    color: #ddd;
-    font-weight: lighter;
-    margin-top: 5px;
-    line-height: 1.15;
-  }
-}
-
-.menu {
-  text-align: right;
-  padding-top: 30px;
-
-  li {
-    display: inline-block;
-    margin-left: 50px;
-    font-weight: lighter;
-
-    a {
-      color: #eee;
-    }
-  }
-}
+@import "theme";
+@import "global";
+@import "header";
+@import "footer";
 
 // HERO
 .hero {
@@ -351,41 +254,8 @@ header {
     font-weight: bold;
     width: 100%;
   }
-  .a {}
 }
 
-footer {
-  margin-top: 50px;
-  padding-top: 20px;
-  height: 250px;
-  background-color: #eee;
-
-  .logo-div {
-    padding-top: 30px;
-  }
-
-  .logos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .left p {
-      color: #666;
-    }
-    .right img {
-      height: 100px;
-    }
-  }
-
-  .copyright {
-    font-size: .5rem;
-    text-align: center;
-    margin-top: 90px;
-    p {
-      margin: 0;
-      color: #666;
-    }
-  }
-}
 
 @media screen and (max-width: 1199px) {
   .features .inner-container {
@@ -394,20 +264,12 @@ footer {
 }
 
 @media screen and (max-width: 991px) {
-  header .menu {
-    display: none;
-  }
-
   .hero {
     display: block;
 
     .right img {
       width: 100%;
     }
-  }
-
-  .inner-container {
-    margin: 0;
   }
 
   .features .card {

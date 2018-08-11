@@ -1,0 +1,32 @@
+footer {
+  margin-top: 50px;
+  padding-top: 20px;
+  height: 250px;
+  background-color: #eee;
+
+  .logo-div {
+    padding-top: 30px;
+  }
+
+  .logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left p {
+      color: #666;
+    }
+    .right img {
+      height: 100px;
+    }
+  }
+
+  .copyright {
+    font-size: .5rem;
+    text-align: center;
+    margin-top: 90px;
+    p {
+      margin: 0;
+      color: #666;
+    }
+  }
+}
