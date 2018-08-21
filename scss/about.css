@@ -11,6 +11,8 @@
   text-align: center;
   padding: 60px 0 40px;
   font-weight: normal;
+  font-family: "chaparral-pro", serif;
+  font-weight: lighter;
 }
 
 .btn {
@@ -59,11 +61,16 @@
 header {
   height: 90px;
   background-color: #B92228;
+  font-family: "chaparral-pro", serif;
+  font-weight: lighter;
 }
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+header .container a:hover {
+  text-decoration: none;
 }
 
 .logo-div {
@@ -139,6 +146,45 @@ footer .copyright {
 footer .copyright p {
   margin: 0;
   color: #666;
+}
+
+.hero {
+  height: 250px;
+}
+.hero h1 {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.people {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+}
+.people .person {
+  width: 33%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.people .person img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  border-radius: 100%;
+  margin-bottom: 35px;
+}
+.people .person .name {
+  margin: 0;
+  font-weight: bolder;
+  text-align: center;
+}
+.people .person .info {
+  font-style: italic;
+  text-align: center;
+  font-size: .8rem;
 }
 
 /*# sourceMappingURL=about.css.map */

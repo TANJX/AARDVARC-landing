@@ -11,6 +11,8 @@
   text-align: center;
   padding: 60px 0 40px;
   font-weight: normal;
+  font-family: "chaparral-pro", serif;
+  font-weight: lighter;
 }
 
 .btn {
@@ -59,11 +61,16 @@
 header {
   height: 90px;
   background-color: #B92228;
+  font-family: "chaparral-pro", serif;
+  font-weight: lighter;
 }
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+header .container a:hover {
+  text-decoration: none;
 }
 
 .logo-div {
@@ -312,11 +319,11 @@ footer .copyright p {
 }
 
 .carousel-control-prev-icon {
-  background-image: url(img/prev.svg);
+  background-image: url(../img/prev.svg);
 }
 
 .carousel-control-next-icon {
-  background-image: url(img/next.svg);
+  background-image: url(../img/next.svg);
 }
 
 /* CREATORS */

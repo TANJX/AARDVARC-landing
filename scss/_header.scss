@@ -1,11 +1,17 @@
 header {
   height: 90px;
   background-color: $primary-color;
+  font-family: "chaparral-pro", serif;
+  font-weight: lighter;
 
   .container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    a:hover {
+      text-decoration: none;
+    }
   }
 }
 

@@ -4,3 +4,46 @@
 @import "global";
 @import "header";
 @import "footer";
+
+.hero {
+  height: 250px;
+  h1 {
+    padding-top: 100px;
+    text-align: center;
+  }
+}
+
+.people {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+
+  .person {
+    width: 33%;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 150px;
+      border-radius: 100%;
+      margin-bottom: 35px;
+    }
+
+    .name {
+      margin: 0;
+      font-weight: bolder;
+      text-align: center;
+    }
+
+    .info {
+      font-style: italic;
+      text-align: center;
+      font-size: .8rem;
+    }
+  }
+}
