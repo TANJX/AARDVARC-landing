@@ -1,0 +1,1 @@
+sass --watch scss/index.scss:css/index.css scss/syllabus.scss:css/syllabus.css scss/about.scss:css/about.css scss/report.scss:css/report.css scss/management.scss:css/management.css --style expanded

@@ -1,0 +1,22 @@
+/* Created by Mars on Aug 11 */
+
+@import "theme";
+@import "global";
+@import "header";
+@import "footer";
+
+.hero {
+  height: 250px;
+  h1 {
+    padding-top: 100px;
+    text-align: center;
+  }
+}
+
+.video-demo {
+  margin: 25px 0;
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
+}
