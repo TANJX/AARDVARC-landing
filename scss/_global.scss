@@ -1,3 +1,7 @@
+$primary-color: #B92228;
+$primary-color-active: #ac0a11;
+
+
 .inner-container {
   margin: 0 80px;
 }
@@ -9,7 +13,6 @@
 .section-title {
   text-align: center;
   padding: 60px 0 40px;
-  font-weight: normal;
   font-family: "chaparral-pro", serif;
   font-weight: lighter;
 }
@@ -33,7 +36,7 @@
   color: white;
 
   &:hover {
-    background-color: #ac0a11;
+    background-color: $primary-color-active;
   }
 
   &:active {
@@ -51,7 +54,7 @@
   }
 
   &:active {
-    background-color: #ac0a11;
+    background-color: $primary-color-active;
     color: white;
   }
 }

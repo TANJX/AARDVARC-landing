@@ -1,0 +1,59 @@
+doctype html
+head
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    // Global site tag (gtag.js) - Google Analytics
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-126098284-1')
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-126098284-1');
+    // Bootstrap CSS
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+    block style
+    link(rel='stylesheet', href='https://use.typekit.net/pvw6fiz.css')
+    title AARDVARC
+
+body
+    header.clearfix
+        .header.container
+            a(href='#')
+                .logo-div
+                    img(src='img/logo-white.svg')
+                    p
+                        | Automated Approach to Reviewing and Developing Valuable Assessment Resources for your Curriculum
+            .menu
+                ul
+                    //
+                      <li><a href="syllabus.html">Syllabus</a></li>
+                      <li><a href="management.html">Management</a></li>
+                      <li><a href="report.html">Reports</a></li>
+                    li
+                        a(href='creators.html') About Us
+
+    block content
+    footer
+        .container
+            .logos
+                .left.logo-div
+                    img(src='img/logo-red.svg')
+                    p
+                        | Automated Approach to Reviewing and Developing Valuable Assessment Resources for your Curriculum
+                .right
+                    img(src='img/aca-logo.png')
+            .copyright
+                p Developed at the University of Southern California School of Pharmacy.
+                p
+                    | AARDVARC
+                    sup &copy;
+                    |  is a product of ACADOINFORMATICS. Copyright AARDVARC&copy; 2018. All rights reserved.
+
+    block script
+        script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+        script(src='lib/jquery-ui.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
