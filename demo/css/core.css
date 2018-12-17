@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.main {
+  padding: 80px 0 60px;
+  margin-left: 0;
+}
+
+.main-wrapper {
+  padding: 10px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+footer {
+  border-top: 1px solid #bbb;
+  padding-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+footer .logo {
+  width: 125px;
+  transform: translateX(-3px);
+}
+
+footer p {
+  font-size: .7rem;
+  color: #666;
+  margin: 0.3rem 0;
+  line-height: 1.1;
+}
+
+.table-title {
+  font-size: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+table thead tr {
+  border-bottom: 2px solid #cbcbcb;
+}
+
+table tbody tr:hover {
+  background-color: rgba(228, 228, 228, 0.49);
+}
+
+table tr {
+  border-bottom: 1px solid #cbcbcb;
+}
+
+table th {
+  color: #666;
+  text-align: left;
+  height: 48px;
+  font-size: 12px;
+}
+
+table td {
+  height: 50px;
+  font-size: 14px;
+}
+
+.lowercase {
+  text-transform: none;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: var(--mdc-theme-primary);
+}
+

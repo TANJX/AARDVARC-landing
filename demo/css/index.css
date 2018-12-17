@@ -1,0 +1,39 @@
+.top-links div {
+  margin: 10px 0;
+}
+
+.mdc-list {
+  margin-top: 20px;
+}
+
+a.mdc-list-item {
+  font-weight: 300;
+  height: auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .125);
+  margin-bottom: -1px;
+}
+
+.left-wrapper {
+  margin: 0 1.25rem;
+}
+
+.main {
+  padding: 80px 0 60px;
+  margin-left: 0;
+}
+
+.main-wrapper .subtitle {
+  color: #333;
+}
+
+#main-form {
+  margin: 20px 0;
+}
+
+.mdc-button[hidden] {
+  display: none;
+}
+

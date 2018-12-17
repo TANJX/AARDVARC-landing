@@ -62,7 +62,6 @@ function updateField() {
                 formField.input = new mdc.radio.MDCRadio(e[0]);
             }
         }
-
     });
 }
 
