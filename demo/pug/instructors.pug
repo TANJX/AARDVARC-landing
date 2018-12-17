@@ -1,0 +1,72 @@
+extends _syllabus_main
+
+block main
+    h2.form-title Instructors
+    h3.form-title Course Instructors
+    #InstructorList
+        .entry
+            select.select-depart
+                option(value='null' disabled='disabled') Select Instructor
+                option(value='ALSK' selected='selected') Alaska Studies
+                option(value='RNRL') Rock and Roll
+            select.select-type
+                option(value='0' selected='selected') Internal
+                option(value='4') External
+                option(value='2') Resident/Postdoctoral
+                option(value='5') Staff
+            select.select-instructor
+                option(value='null' disabled='disabled') Select Instructor
+                option(value='4' selected='selected') Berlanga, Carlos
+                option(value='8') Canut, Ignacio
+                option(value='1') Gara, Olvido
+            select.select-coord
+                option(value='Y' selected='selected') Coordinator
+                option(value='N') Not Coordinator
+            button.mdc-icon-button.material-icons(type='button')
+                i.material-icons close
+        .entry
+            select.select-depart
+                option(value='null' disabled='disabled') Select Instructor
+                option(value='ALSK') Alaska Studies
+                option(value='RNRL' selected='selected') Rock and Roll
+            select.select-type
+                option(value='0') Internal
+                option(value='2') Resident/Postdoctoral
+                option(value='3') Teaching Assistant
+                option(value='1' selected='selected') University
+            select.select-instructor
+                option(value='null' disabled='disabled') Select Instructor
+                option(value='2' selected='selected') Jagger, Mick
+            select.select-coord
+                option(value='Y') Coordinator
+                option(value='N' selected='selected') Not Coordinator
+            button.mdc-icon-button.material-icons(type='button')
+                i.material-icons close
+        .entry
+            select.select-depart
+                option(value='null' disabled='disabled') Select Instructor
+                option(value='ALSK' selected='selected') Alaska Studies
+                option(value='RNRL') Rock and Roll
+            select.select-type
+                option(value='0') Internal
+                option(value='4' selected='selected') External
+                option(value='2') Resident/Postdoctoral
+                option(value='5') Staff
+            select.select-instructor
+                option(value='null' disabled='disabled') Select Instructor
+                option(value='26') Escalante, Amanda
+                option(value='19' selected='selected') Kekul&eacute;, Friedrich
+                option(value='5') Oliver, John
+            select.select-coord
+                option(value='Y') Coordinator
+                option(value='N' selected='selected') Not Coordinator
+            button.mdc-icon-button.material-icons(type='button')
+                i.material-icons close
+        .entry
+            select.select-depart
+                option(value='null' selected='selected' disabled='disabled') Add Instructor
+                option(value='ALSK') Alaska Studies
+                option(value='RNRL') Rock and Roll
+
+    script.
+        const current_page = 'instructors';

@@ -83,55 +83,30 @@ function updateField(div) {
     });
 }
 
-const classCode = '3I7j5VHfPiFOPP70sWQc';
-var headerClassData = {
-    "Title": "Pharmacology",
-    "Semester": "Fall 2018",
-    "AccessCode": "3I7j5VHfPiFOPP70sWQc",
-    "AskCopy": false,
-    "PriorCourse": "GM5MP2oYIE6AO591g8eQ"
-};
 let changed = false;
 
+$('.left-col .mdc-list-item[title="' + current_page +'"]').addClass('active');
+
+$("#save-btn").click(function () {
+    warn('Saving is disabled in the demo')
+});
+
+$("#back-btn").click(function () {
+    // todo
+});
+
+$("#continue-btn").click(function () {
+    const next = $('#menu-links a[id="' + currentPage + '"]').next().attr('id');
+    if (typeof next !== "undefined") {
+        switchTo(next);
+    } else if (typeof backToEditor === 'function') {
+        // current page is limited engagement form
+        backToEditor();
+    } else {
+        window.location = AbsUrlPath + "/coord/index/" + classCode;
+    }
+});
 /*
-  let currentPage = 'CourseBasics';
-  switchTo(currentPage);
-  //getHeader();
-
-  $("#continue-btn").click(function () {
-      save();
-      const next = $('#menu-links a[id="' + currentPage + '"]').next().attr('id');
-      if (typeof next !== "undefined") {
-          switchTo(next);
-      } else if (typeof backToEditor === 'function') {
-          // current page is limited engagement form
-          backToEditor();
-      } else {
-          window.location = AbsUrlPath + "/coord/index/" + classCode;
-      }
-  });
-
-
-  $("#back-btn").click(function () {
-      window.location = AbsUrlPath + "/coord/index/" + classCode;
-  });
-
-  $("#save-btn").click(function () {
-      save();
-  });
-
-  $("#menu-links a").click(function () {
-      const id = $(this).attr('id');
-      if (currentPage === id) return;
-      if (changed) {
-          if (confirm('Are you sure you want to leave the page WITHOUT saving'))
-              switchTo(id);
-      } else {
-          switchTo(id);
-      }
-      return false;
-  });
-
   $('#gen-btn').click(function () {
       window.location = 'MakeDocument.html?ClassCode=' + classCode;
   });

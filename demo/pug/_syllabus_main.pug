@@ -1,0 +1,61 @@
+head
+    title Syllabus Demo | AARDVARC&copy;
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='lib/normalize.css')
+    link(rel='stylesheet' href='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css')
+    link(rel='stylesheet' href='css/core.css')
+    link(rel='stylesheet' href='css/page.css')
+    link(rel='stylesheet' href='css/form.css')
+    link(rel='stylesheet' href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+    script(src='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js')
+    script(src='lib/jquery-3.3.1.min.js')
+    script(src='http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+.banner
+    .banner-logo
+        img(src='img/school-logo.png' alt='banner logo')
+        span#DemoWarn DEMO
+    .banner-title
+        h4
+            span Course Editor
+            span#SemesterTitle(style='padding: 0 8px')
+                b Spring 2019
+            span#CourseTitle
+                b AARD 403: Syllabus Management
+                |  (3 units)
+.left-col
+    .left-wrapper
+        button#back-btn.mdc-button.ripple
+            i.material-icons(style='font-size: 16px') arrow_back_ios
+            | Go Back
+    #menu-links.mdc-list
+        a#CourseBasics.mdc-list-item.ripple(href='basic.html' title='basic')
+            | Course Basics
+        a#Instructors.mdc-list-item.ripple(href='instructors.html' title='instructors') Instructors
+        a#Checkbox_4.mdc-list-item.ripple(href='#' title='Course Objectives')
+            | Course Objectives
+        a#Grading.mdc-list-item.ripple(href='#' title='Grading Breakdown')
+            | Grading Breakdown
+        a#MeetingTimes.mdc-list-item.ripple(href='#' title='Course Schedule')
+            | Course Schedule
+        a#MakeDocument.mdc-list-item.ripple(href='#' title='Generate Syllabus PDF')
+            | Generate Syllabus PDF
+.main
+    .main-wrapper
+        #main-form
+            block main
+        #nav-btns.buttons
+            button#save-btn.mdc-button.mdc-button--outlined.ripple Save
+            button#continue-btn.mdc-button.mdc-button--raised.ripple.btn
+                | Save and Continue
+        footer
+            img.logo(src='img/logo-red.svg' alt='AARDVARC logo')
+            p AcadoInformatics, LLC
+            p Version: 2.1
+            p Date: Jan 1, 2019
+            p Authors: Dab Brill, Mukesh Poptani, Mars Tan
+
+script(src='js/syllabus.js')
