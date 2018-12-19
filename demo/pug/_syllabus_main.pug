@@ -1,3 +1,5 @@
+doctype html
+include _mixin
 head
     title Syllabus Demo | AARDVARC&copy;
     meta(charset='utf-8')
@@ -34,23 +36,25 @@ head
     #menu-links.mdc-list
         a#CourseBasics.mdc-list-item.ripple(href='basic.html' title='basic')
             | Course Basics
-        a#Instructors.mdc-list-item.ripple(href='instructors.html' title='instructors') Instructors
+        a#Instructors.mdc-list-item.ripple(href='instructors.html' title='instructors')
+            | Instructors
         a#Checkbox_4.mdc-list-item.ripple(href='methods.html' title='methods')
             | Teaching & Assessment Methods
-        a#Grading.mdc-list-item.ripple(href='#' title='Grading Breakdown')
+        a#Grading.mdc-list-item.ripple(href='grading.html' title='grading')
             | Grading Breakdown
-        a#MeetingTimes.mdc-list-item.ripple(href='#' title='Course Schedule')
+        a#MeetingTimes.mdc-list-item.ripple(href='events.html' title='events')
             | Course Schedule
-        a#MakeDocument.mdc-list-item.ripple(href='#' title='Generate Syllabus PDF')
+        a#MakeDocument.mdc-list-item.ripple(href='genpdf.html' title='genpdf')
             | Generate Syllabus PDF
 .main
     .main-wrapper
         #main-form
             block main
-        #nav-btns.buttons
-            button#save-btn.mdc-button.mdc-button--outlined.ripple Save
-            button#continue-btn.mdc-button.mdc-button--raised.ripple.btn
-                | Save and Continue
+        block buttons
+            #nav-btns.buttons
+                button#save-btn.mdc-button.mdc-button--outlined.ripple Save
+                button#continue-btn.mdc-button.mdc-button--raised.ripple.btn
+                    | Save and Continue
         footer
             img.logo(src='img/logo-red.svg' alt='AARDVARC logo')
             p AcadoInformatics, LLC

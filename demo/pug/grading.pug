@@ -1,0 +1,45 @@
+extends _syllabus_main
+
+block main
+    h2.form-title Grading Breakdown
+    .input-helper
+        i Indicate how students will be graded overall, including the assignments detailed above.
+        i All must total 100%.
+
+    .grade-entry-add
+        button.mdc-icon-button.material-icons
+            i.material-icons add
+    .grade-entry
+        label
+        input(type='text', value='Project')
+        label Percent
+        input(type='text' value='30')
+        button.mdc-icon-button.material-icons
+            i.material-icons.delete-btn delete
+    .grade-entry-add
+        button.mdc-icon-button.material-icons
+            i.material-icons add
+    .grade-entry
+        label
+        input(type='text', value='Exam')
+        label Percent
+        input(type='text' value='30')
+        button.mdc-icon-button.material-icons
+            i.material-icons.delete-btn delete
+    .grade-entry-add
+        button.mdc-icon-button.material-icons
+            i.material-icons add
+    .grade-entry
+        label
+        input(type='text', value='Participation')
+        label Percent
+        input(type='text' value='40')
+        button.mdc-icon-button.material-icons
+            i.material-icons.delete-btn delete
+    .grade-entry-add
+        button.mdc-icon-button.material-icons
+            i.material-icons add
+    p#PercTotal.mdc-typography--headline3 100.00% Total
+
+    script.
+        const current_page = 'grading';

@@ -52,7 +52,8 @@
 }
 
 .banner-title {
-  background-color: var(--mdc-theme-primary);
+  /*background-color: var(--mdc-theme-primary);*/
+  background-image: linear-gradient(to bottom right, var(--mdc-theme-primary), #f76640);
 }
 
 .banner-title h4 {

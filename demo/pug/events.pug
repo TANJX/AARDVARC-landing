@@ -1,0 +1,191 @@
+extends _syllabus_main
+
+block main
+    h2.form-title Course Schedule
+    .input-helper
+        i
+            | Provide a detailed course calendar that provides a thorough list of deliverables&mdash;readings, assignments,
+            | examinations, etc. The format may vary, but the content must include:
+        ul
+            li
+                i Subject matter (topic) or activity
+            li
+                i
+                    | Required preparatory reading, or other assignments (i.e., viewing videos) for each class session, including
+                    | page numbers.
+            li
+                i Assignments or deliverables.
+    div(style='margin-top: 70px')
+        h3.form-title Auto Add Meeting Dates
+        .form-section.grid-2
+            .half.left
+                label(for='startDate') Start Date:
+                input#startDate(type='date' value='2004-01-05')
+            .half.right
+                span
+                label(for='endDate') End Date:
+                input#endDate(type='date' value='2004-01-12')
+        .form-section
+            .grid-2
+                div
+                    p The meeting times for this course are
+                .grid-2
+                    .mdc-form-field
+                        .mdc-radio
+                            input#radio-1.mdc-radio__native-control(type='radio' name='IrregularTimes' value='NO' checked='')
+                            .mdc-radio__background
+                                .mdc-radio__outer-circle
+                                .mdc-radio__inner-circle
+                        label(for='radio-1') Consistent
+                    .mdc-form-field
+                        .mdc-radio
+                            input#radio-2.mdc-radio__native-control(type='radio' name='IrregularTimes' value='YES')
+                            .mdc-radio__background
+                                .mdc-radio__outer-circle
+                                .mdc-radio__inner-circle
+                        label(for='radio-2') Irregular
+            .input-helper(style='margin-top: 10px')
+                i
+                    | This option determines whether the selected days of week below will be displayed on the syllabus&apos; heading
+        .form-section.grid-7
+            +checkbox('D1', 'Sun')
+            +checkbox('D2', 'Mon')
+            +checkbox('D3', 'Tue', 'checked')
+            +checkbox('D4', 'Wed')
+            +checkbox('D5', 'Thu', 'checked')
+            +checkbox('D6', 'Fri')
+            +checkbox('D7', 'Sat')
+        .form-section.grid-2
+            .half.left
+                label(for='dfltStart') Class Starts:
+                input#dfltStart(type='time' name='startTime' value='')
+            .half.right
+                span
+                label(for='dfltEnd') Class Ends:
+                input#dfltEnd(type='time' name='endTime' value='14:15:00')
+        .form-section
+            button#MakeMeets.mdc-button.mdc-button--outlined.ripple
+                | Fill out meeting times
+    div(style='margin-top: 70px')
+        h3.form-title Meeting Dates
+        .form-section
+            div
+                button.mdc-icon-button.material-icons
+                    i.material-icons add
+                button.mdc-icon-button.material-icons.save-btn
+                    i.material-icons save
+            .form-section.grid-2
+                .half.left(style='position: relative')
+                    label.m-t-10px.bold Tuesday
+                    input(type='date')
+                    button.mdc-icon-button.material-icons.delete-btn
+                        i.material-icons delete
+                    b.holiday(style='position: absolute; right: -120px;  top: 15px  ')
+            .form-section.grid-2
+                .half.left
+                    label.m-t-10px(for='startDate') Class Starts:
+                    input(type='time' value='11:54:00')
+                .half.right
+                    span
+                    label.m-t-10px(for='startDate') Class Ends:
+                    input(type='time' value='14:10:00')
+            .form-section.full
+                label.m-t-10px Title:
+                input(type='text' value='First Day of Class')
+            .form-section.grid-2
+                .half.left
+                    label.m-t-10px Lecture Type:
+                    select
+                        option(value='Lecture' selected='selected') Lecture
+                        option(value='Exam') Exam
+                        option(value='Discussion') Discussion
+            .form-section.grid-2
+                .half.left
+                    label.m-t-10px Lecturer:
+                    div
+                        select
+                            option(value='0' selected='selected') Berlanga, Carlos
+                            option(value='2') Canut, Ignacio
+                            option(value='3') Jagger, Mick
+                            option(value='4') Knowles, Beyonce
+                            option(value='5') Kekul&eacute;, Friedrich
+                            option(value='6') Nixon, Richard
+                            option(value='7') Remove Lecturer
+                        select
+                            option(value='2') Canut, Ignacio
+                            option(value='3') Jagger, Mick
+                            option(value='4') Knowles, Beyonce
+                            option(value='5') Kekul&eacute;, Friedrich
+                            option(value='6') Nixon, Richard
+                            option(value='7' selected='selected') Add Lecturer
+            .form-section
+                label
+                    | Additional Course Information: Readings, Objectives/Learning Goals, Assignments, and Deliverables
+                textarea.m-t-10px(rows='4') An welcome and introduction session to the information in the class
+            hr(style='margin-top: 50px')
+        .form-section
+            div
+                button.mdc-icon-button.material-icons
+                    i.material-icons add
+                button.mdc-icon-button.material-icons.save-btn
+                    i.material-icons save
+            .form-section.grid-2
+                .half.left(style='position: relative')
+                    label.m-t-10px.bold Wednesday
+                    input#meetDate(type='date')
+                    button.mdc-icon-button.material-icons.delete-btn
+                        i.material-icons delete
+                    b.holiday(style='position: absolute; right: -120px;  top: 15px  ')
+            .form-section.grid-2
+                .half.left
+                    label.m-t-10px(for='startDate') Class Starts:
+                    input(type='time' value='11:52:00')
+                .half.right
+                    span
+                    label.m-t-10px(for='startDate') Class Ends:
+                    input(type='time' value='14:15:00')
+            .form-section.full
+                label.m-t-10px Title:
+                input(type='text' value='Introduction to La Movida Madrileña')
+            .form-section.grid-2
+                .half.left
+                    label.m-t-10px Lecture Type:
+                    select
+                        option(value='Lecture' selected='selected') Lecture
+                        option(value='Exam') Exam
+                        option(value='Discussion') Discussion
+            .form-section.grid-2
+                .half.left
+                    label.m-t-10px Lecturer:
+                    div
+                        select
+                            option(value='0' selected='selected') Berlanga, Carlos
+                            option(value='2') Canut, Ignacio
+                            option(value='3') Jagger, Mick
+                            option(value='4') Knowles, Beyonce
+                            option(value='5') Kekul&eacute;, Friedrich
+                            option(value='6') Nixon, Richard
+                            option(value='7') Remove Lecturer
+                        select
+                            option(value='2') Canut, Ignacio
+                            option(value='3') Jagger, Mick
+                            option(value='4') Knowles, Beyonce
+                            option(value='5') Kekul&eacute;, Friedrich
+                            option(value='6') Nixon, Richard
+                            option(value='7' selected='selected') Add Lecturer
+            .form-section
+                label
+                    | Additional Course Information: Readings, Objectives/Learning Goals, Assignments, and Deliverables
+                textarea.m-t-10px(rows='4') Spanish pop culture in the 1980s, following the death of Francisco Franco
+            hr(style='margin-top: 50px')
+        div
+            button.mdc-icon-button.material-icons
+                i.material-icons add
+            button.mdc-icon-button.material-icons.save-btn
+                i.material-icons save
+        .input-helper
+            i
+                | Friendly reminder: Please be sure to reserve time in class for students to complete their Learning Experience Evaluation.
+
+    script.
+        const current_page = 'events';

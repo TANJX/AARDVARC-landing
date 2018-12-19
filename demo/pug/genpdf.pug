@@ -1,0 +1,94 @@
+extends _syllabus_main
+
+block main
+    h1.mdc-typography--headline3.title Generate Syllabus Documents
+    h2 Completion Check
+    #CheckResults
+        ul
+            li.good
+                a(href='basic.html') Course Basics - Complete
+            li.good
+                a(href='instructors.html') Instructors - Complete
+            li.good
+                a(href='grading.html') Grading Breakdown - Complete
+            li.good
+                a(href='methods.html') Teaching & Assessment Methods - Complete
+            li.good
+                a(href='events.html') Course Schedule - Complete
+    p#Complete.good Syllabus is completed.
+    .form-section
+        a.mdc-button.mdc-button--dense.mdc-button--outlined(href='#' target='_blank')
+            | See Previously Generated Syllabus
+
+    style.
+        ul li {
+            margin: 24px 0;
+            position: relative;
+            list-style: none;
+        }
+
+        ul li a {
+            color: inherit;
+        }
+
+        li.good {
+            color: #585858;
+        }
+
+        li::before {
+            font-family: 'Material Icons', sans-serif;
+            display: inline-block;
+            font-size: 28px;
+            position: absolute;
+            left: -35px;
+            top: -10px;
+            color: #585858;
+        }
+
+        li.good::before {
+            content: 'done';
+        }
+
+        li.bad {
+            color: var(--mdc-theme-primary);
+        }
+
+        li.bad::before {
+            content: 'edit';
+        }
+
+        .buttons button {
+            margin-right: 7px;
+        }
+
+        #Complete {
+            margin-top: 30px;
+        }
+
+        #Complete.good::after {
+            font-family: 'Material Icons', sans-serif;
+            display: inline-block;
+            content: 'mood';
+            font-size: 28px;
+            margin-left: 10px;
+        }
+
+        #Complete.bad::after {
+            font-family: 'Material Icons', sans-serif;
+            display: inline-block;
+            content: 'sentiment_dissatisfied';
+            font-size: 28px;
+            margin-left: 10px;
+        }
+
+        #pdf-status {
+            margin: 25px 0;
+        }
+
+        #gen-result button {
+            margin-right: 20px;
+        }
+    script.
+        const current_page = 'genpdf';
+
+block buttons

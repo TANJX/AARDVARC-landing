@@ -1,38 +1,23 @@
 extends _syllabus_main
 
-mixin checkbox(id, name)
-    .option
-        .mdc-form-field
-            .mdc-checkbox
-                input.mdc-checkbox__native-control(type='checkbox', id= id)
-                .mdc-checkbox__background
-                    svg.mdc-checkbox__checkmark(viewbox='0 0 24 24')
-                        path.mdc-checkbox__checkmark-path(fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59')
-                    .mdc-checkbox__mixedmark
-            label(for= id)= name
-
 block main
-    #main-form
-        h2.form-title Teaching Methods
-        ol
-            li
-                h4 Teaching Methods
-                ul
-                    +checkbox('A0', 'Classroom lecture')
-                    +checkbox('A1', 'Computer-based lecture')
-                    +checkbox('A2', 'Reading')
-                    +checkbox('A3', 'Group Discussion')
-                    +checkbox('A4', 'Lab')
-            li
-                h4 Assessment Methods
-                ul
-                    +checkbox('B0', 'Multiple choice examination')
-                    +checkbox('B1', 'Short answer examination')
-                    +checkbox('B2', 'Essay')
-                    +checkbox('B3', 'In class quizzes')
+    h2.form-title Teaching Methods
+    ol
+        li
+            h4 Teaching Methods
+            ul
+                .option: +checkbox('A0', 'Classroom lecture')
+                .option: +checkbox('A1', 'Computer-based lecture', 'checked')
+                .option: +checkbox('A2', 'Reading')
+                .option: +checkbox('A3', 'Group Discussion')
+                .option: +checkbox('A4', 'Lab')
+        li
+            h4 Assessment Methods
+            ul
+                .option: +checkbox('B0', 'Multiple choice examination')
+                .option: +checkbox('B1', 'Short answer examination', 'checked')
+                .option: +checkbox('B2', 'Essay', 'checked')
+                .option: +checkbox('B3', 'In class quizzes')
 
     script.
         const current_page = 'methods';
-        $('#A1').attr("checked",true);
-        $('#A3').attr("checked",true);
-        $('#B1').attr("checked",true);

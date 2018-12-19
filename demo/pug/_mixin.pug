@@ -1,0 +1,9 @@
+mixin checkbox(id, name, checked)
+    .mdc-form-field
+        .mdc-checkbox
+            input.mdc-checkbox__native-control(type='checkbox', id= id, checked= checked)
+            .mdc-checkbox__background
+                svg.mdc-checkbox__checkmark(viewbox='0 0 24 24')
+                    path.mdc-checkbox__checkmark-path(fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59')
+                .mdc-checkbox__mixedmark
+        label(for= id)= name
