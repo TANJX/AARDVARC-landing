@@ -6,9 +6,16 @@ ErrorDocument 404 /404.html
 DirectorySlash off
 RedirectMatch ^/$ /aardvarc/
 
+# no html
+RewriteRule "^aardvarc/([^.^/]*)/$" "aardvarc/$1.html"
+RewriteRule "^aardvarc/demo/([^.^/]*)/$" "aardvarc/demo/$1.html"
+
+RedirectMatch ^/aardvarc/index/$ "/aardvarc/"
+
+# add slash
+RedirectMatch ^/aardvarc/([^.^/]+)$ /aardvarc/$1/
+RedirectMatch ^/aardvarc/demo/([^.^/]+)$ /aardvarc/demo/$1/
+
+# demo default page
 RedirectMatch ^/aardvarc/demo$ "/aardvarc/demo/basic/"
 RedirectMatch ^/aardvarc/demo/$ "/aardvarc/demo/basic/"
-
-RedirectMatch ^/aardvarc/demo/([^.^/]*)$ /aardvarc/demo/$1/
-
-RewriteRule "^aardvarc/demo/([^.]*)/$" "aardvarc/demo/$1.html"

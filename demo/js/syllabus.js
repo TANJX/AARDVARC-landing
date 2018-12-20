@@ -114,7 +114,7 @@ function getCookie(key) {
 if (getCookie('visited') === -1) {
 // first visit
     let expires = new Date(Date.now() + 60 * 60 * 1000);
-    document.cookie = "visited=true; expires=" + expires.toUTCString();
+    document.cookie = "visited=true; expires=" + expires.toUTCString() + "; path= /aardvarc/demo/";
     const dialog = new mdc.dialog.MDCDialog($('#dialog')[0]);
     dialog.open()
 }
