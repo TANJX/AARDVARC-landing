@@ -62,4 +62,24 @@ head
             p Date: Jan 1, 2019
             p Authors: Dab Brill, Mukesh Poptani, Mars Tan
 
+.mdc-dialog(id='dialog' role='alertdialog' aria-modal='true' aria-labelledby='my-dialog-title' aria-describedby='my-dialog-content')
+    .mdc-dialog__container
+        .mdc-dialog__surface
+            h2#my-dialog-title.mdc-dialog__title
+                | Welcome to AARDVARC
+                sup &copy;
+                |
+                | demo
+            #my-dialog-content.mdc-dialog__content
+                p
+                    | This is a demo version of AARDVARC Syllabus Tool.
+                    | Only partial features and pages are available.
+                    | Saving is disabled.
+                    | For a full demo, please contact
+                    |
+                    a(href='mailto:aardvarc@usc.edu') aardvarc@usc.edu
+            footer.mdc-dialog__actions
+                button.mdc-button.mdc-dialog__button(type='button' data-mdc-dialog-action='accept') OK
+    .mdc-dialog__scrim
+
 script(src='js/syllabus.js')

@@ -101,3 +101,22 @@ $('#gen-btn').click(function () {
 $('.left-col .ripple').each(function () {
     mdc.ripple.MDCRipple.attachTo($(this)[0]);
 });
+
+// cookie
+function getCookie(key) {
+    const allcookies = document.cookie.split(';');
+    for (let i = 0; i < allcookies.length; i++) {
+        const name = allcookies[i].split('=')[0];
+        if (name === key)
+            return allcookies[i].split('=')[1];
+    }
+    return -1;
+}
+
+if (getCookie('visited') === -1) {
+// first visit
+    let expires = new Date(Date.now() + 60 * 60 * 1000);
+    document.cookie = "visited=true; expires=" + expires.toUTCString();
+    const dialog = new mdc.dialog.MDCDialog($('#dialog')[0]);
+    dialog.open()
+}
