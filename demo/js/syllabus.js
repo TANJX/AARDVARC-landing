@@ -89,7 +89,13 @@ $("#continue-btn").click(function () {
 });
 
 $('#gen-btn').click(function () {
-    // todo
+    warn('Syllabus generation is simulated in the demo');
+    $(this).attr('disabled', true);
+    $('#pdf-status').show();
+    setTimeout(function () {
+        $('#pdf-status').hide();
+        $('#gen-result').show();
+    }, 3000);
 });
 
 $('.left-col .ripple').each(function () {

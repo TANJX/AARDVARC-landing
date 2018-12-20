@@ -17,8 +17,21 @@ block main
                 a(href='events.html') Course Schedule - Complete
     p#Complete.good Syllabus is completed.
     .form-section
-        a.mdc-button.mdc-button--dense.mdc-button--outlined(href='#' target='_blank')
-            | See Previously Generated Syllabus
+        button.mdc-button.mdc-button--raised(id='gen-btn') Make pdf file
+    #pdf-status(hidden='')
+        p Please Wait While Program Generates Your Syllabus
+        .mdc-linear-progress.mdc-linear-progress--indeterminate(role='progressbar')
+            .mdc-linear-progress__buffering-dots
+            .mdc-linear-progress__buffer
+            .mdc-linear-progress__bar.mdc-linear-progress__primary-bar
+                span.mdc-linear-progress__bar-inner
+            .mdc-linear-progress__bar.mdc-linear-progress__secondary-bar
+                span.mdc-linear-progress__bar-inner
+    #gen-result(hidden='')
+        p#Result.mdc-typography--body1.bold(style='color: green') Syllabus Successfully Generated
+        .form-section
+            a.mdc-button.mdc-button--dense.mdc-button--outlined(href='../files/syllabus-demo.pdf' target='_blank')
+                | Download PDF
 
     style.
         ul li {
