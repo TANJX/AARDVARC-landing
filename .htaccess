@@ -1,0 +1,14 @@
+
+RewriteEngine on
+
+ErrorDocument 404 /404.html
+
+DirectorySlash off
+RedirectMatch ^/$ /aardvarc/
+
+RedirectMatch ^/aardvarc/demo$ "/aardvarc/demo/basic/"
+RedirectMatch ^/aardvarc/demo/$ "/aardvarc/demo/basic/"
+
+RedirectMatch ^/aardvarc/demo/([^.^/]*)$ /aardvarc/demo/$1/
+
+RewriteRule "^aardvarc/demo/([^.]*)/$" "aardvarc/demo/$1.html"

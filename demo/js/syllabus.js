@@ -67,7 +67,7 @@ function updateField() {
 
 updateField();
 
-$('.left-col .mdc-list-item[title="' + current_page + '"]').addClass('active');
+$('.left-col .mdc-list-item[href="' + current_page + '"]').addClass('active');
 
 $("#save-btn").click(function () {
     warn('Saving is disabled in the demo')
@@ -78,13 +78,11 @@ $("#back-btn").click(function () {
 });
 
 $("#continue-btn").click(function () {
-    const next = $('#menu-links a[title="' + current_page + '"]').next().attr('title');
+    const next = $('#menu-links a[href="' + current_page + '"]').next().attr('href');
     if (typeof next !== "undefined") {
-        window.location = next + '.html';
-    } else if (typeof backToEditor === 'function') {
-
+        window.location = next;
     } else {
-        window.location = 'basic.html';
+        window.location = 'basic';
     }
 });
 

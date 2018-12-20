@@ -4,6 +4,7 @@ head
     title Syllabus Demo | AARDVARC&copy;
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    base(href="/aardvarc/demo/")
     link(rel='stylesheet' href='lib/normalize.css')
     link(rel='stylesheet' href='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css')
     link(rel='stylesheet' href='css/core.css')
@@ -14,8 +15,6 @@ head
     link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
     script(src='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js')
     script(src='lib/jquery-3.3.1.min.js')
-    script(src='http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js')
-    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
 
 body
     .banner
@@ -36,17 +35,17 @@ body
                 i.material-icons(style='font-size: 16px') arrow_back_ios
                 | Go Back
         #menu-links.mdc-list
-            a#CourseBasics.mdc-list-item.ripple(href='basic.html' title='basic')
+            a#CourseBasics.mdc-list-item.ripple(href='basic')
                 | Course Basics
-            a#Instructors.mdc-list-item.ripple(href='instructors.html' title='instructors')
+            a#Instructors.mdc-list-item.ripple(href='instructors')
                 | Instructors
-            a#Checkbox_4.mdc-list-item.ripple(href='methods.html' title='methods')
+            a#Checkbox_4.mdc-list-item.ripple(href='methods')
                 | Teaching & Assessment Methods
-            a#Grading.mdc-list-item.ripple(href='grading.html' title='grading')
+            a#Grading.mdc-list-item.ripple(href='grading')
                 | Grading Breakdown
-            a#MeetingTimes.mdc-list-item.ripple(href='events.html' title='events')
+            a#MeetingTimes.mdc-list-item.ripple(href='events')
                 | Course Schedule
-            a#MakeDocument.mdc-list-item.ripple(href='genpdf.html' title='genpdf')
+            a#MakeDocument.mdc-list-item.ripple(href='genpdf')
                 | Generate Syllabus PDF
     .main
         .main-wrapper
