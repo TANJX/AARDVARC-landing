@@ -16,70 +16,72 @@ head
     script(src='lib/jquery-3.3.1.min.js')
     script(src='http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js')
     script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
-.banner
-    .banner-logo
-        img(src='img/school-logo.png' alt='banner logo')
-        span#DemoWarn DEMO
-    .banner-title
-        h4
-            span Course Editor
-            span#SemesterTitle(style='padding: 0 8px')
-                b Spring 2019
-            span#CourseTitle
-                b AARD 403: Syllabus Management
-                |  (3 units)
-.left-col
-    .left-wrapper
-        button#back-btn.mdc-button.ripple
-            i.material-icons(style='font-size: 16px') arrow_back_ios
-            | Go Back
-    #menu-links.mdc-list
-        a#CourseBasics.mdc-list-item.ripple(href='basic.html' title='basic')
-            | Course Basics
-        a#Instructors.mdc-list-item.ripple(href='instructors.html' title='instructors')
-            | Instructors
-        a#Checkbox_4.mdc-list-item.ripple(href='methods.html' title='methods')
-            | Teaching & Assessment Methods
-        a#Grading.mdc-list-item.ripple(href='grading.html' title='grading')
-            | Grading Breakdown
-        a#MeetingTimes.mdc-list-item.ripple(href='events.html' title='events')
-            | Course Schedule
-        a#MakeDocument.mdc-list-item.ripple(href='genpdf.html' title='genpdf')
-            | Generate Syllabus PDF
-.main
-    .main-wrapper
-        #main-form
-            block main
-        block buttons
-            #nav-btns.buttons
-                button#save-btn.mdc-button.mdc-button--outlined.ripple Save
-                button#continue-btn.mdc-button.mdc-button--raised.ripple.btn
-                    | Save and Continue
-        footer
-            img.logo(src='img/logo-red.svg' alt='AARDVARC logo')
-            p AcadoInformatics, LLC
-            p Version: 2.1
-            p Date: Jan 1, 2019
-            p Authors: Dab Brill, Mukesh Poptani, Mars Tan
 
-.mdc-dialog(id='dialog' role='alertdialog' aria-modal='true' aria-labelledby='my-dialog-title' aria-describedby='my-dialog-content')
-    .mdc-dialog__container
-        .mdc-dialog__surface
-            h2#my-dialog-title.mdc-dialog__title
-                | Welcome to AARDVARC
-                sup &copy;
-                |
-                | demo
-            #my-dialog-content.mdc-dialog__content
-                p
-                    | This is a demo version of AARDVARC Syllabus Tool.
-                    | Only partial features and pages are available.
-                    | Saving is disabled.
-                    | For a full demo, please contact
+body
+    .banner
+        .banner-logo
+            img(src='img/school-logo.png' alt='banner logo')
+            span#DemoWarn DEMO
+        .banner-title
+            h4
+                span Course Editor
+                span#SemesterTitle(style='padding: 0 8px')
+                    b Spring 2019
+                span#CourseTitle
+                    b AARD 403: Syllabus Management
+                    |  (3 units)
+    .left-col
+        .left-wrapper
+            button#back-btn.mdc-button.ripple
+                i.material-icons(style='font-size: 16px') arrow_back_ios
+                | Go Back
+        #menu-links.mdc-list
+            a#CourseBasics.mdc-list-item.ripple(href='basic.html' title='basic')
+                | Course Basics
+            a#Instructors.mdc-list-item.ripple(href='instructors.html' title='instructors')
+                | Instructors
+            a#Checkbox_4.mdc-list-item.ripple(href='methods.html' title='methods')
+                | Teaching & Assessment Methods
+            a#Grading.mdc-list-item.ripple(href='grading.html' title='grading')
+                | Grading Breakdown
+            a#MeetingTimes.mdc-list-item.ripple(href='events.html' title='events')
+                | Course Schedule
+            a#MakeDocument.mdc-list-item.ripple(href='genpdf.html' title='genpdf')
+                | Generate Syllabus PDF
+    .main
+        .main-wrapper
+            #main-form
+                block main
+            block buttons
+                #nav-btns.buttons
+                    button#save-btn.mdc-button.mdc-button--outlined.ripple Save
+                    button#continue-btn.mdc-button.mdc-button--raised.ripple
+                        | Save and Continue
+            footer
+                img.logo(src='img/logo-red.svg' alt='AARDVARC logo')
+                p AcadoInformatics, LLC
+                p Version: 2.1
+                p Date: Jan 1, 2019
+                p Authors: Dab Brill, Mukesh Poptani, Mars Tan
+
+    .mdc-dialog(id='dialog' role='alertdialog' aria-modal='true' aria-labelledby='my-dialog-title' aria-describedby='my-dialog-content')
+        .mdc-dialog__container
+            .mdc-dialog__surface
+                h2#my-dialog-title.mdc-dialog__title
+                    | Welcome to AARDVARC
+                    sup &copy;
                     |
-                    a(href='mailto:aardvarc@usc.edu') aardvarc@usc.edu
-            footer.mdc-dialog__actions
-                button.mdc-button.mdc-dialog__button(type='button' data-mdc-dialog-action='accept') OK
-    .mdc-dialog__scrim
+                    | demo
+                #my-dialog-content.mdc-dialog__content
+                    p
+                        | This is a demo version of AARDVARC Syllabus Tool.
+                        | Only partial features and pages are available.
+                        | Saving is disabled.
+                        | For a full demo, please contact
+                        |
+                        a(href='mailto:aardvarc@usc.edu') aardvarc@usc.edu
+                footer.mdc-dialog__actions
+                    button.mdc-button.mdc-dialog__button(type='button' data-mdc-dialog-action='accept') OK
+        .mdc-dialog__scrim
 
-script(src='js/syllabus.js')
+    script(src='js/syllabus.js')

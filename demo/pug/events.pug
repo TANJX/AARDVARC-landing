@@ -4,27 +4,22 @@ block main
     h2.form-title Course Schedule
     .input-helper
         i
-            | Provide a detailed course calendar that provides a thorough list of deliverables&mdash;readings, assignments,
-            | examinations, etc. The format may vary, but the content must include:
+            | Provide a detailed course calendar that provides a thorough list of deliverables. 
+            | The format may vary, but the content must include:
         ul
-            li
-                i Subject matter (topic) or activity
-            li
-                i
-                    | Required preparatory reading, or other assignments (i.e., viewing videos) for each class session, including
-                    | page numbers.
-            li
-                i Assignments or deliverables.
+            li: i Subject matter (topic) or activity
+            li: i Required preparatory reading, or other assignments for each class session.
+            li: i Assignments or deliverables.
     div(style='margin-top: 70px')
         h3.form-title Auto Add Meeting Dates
         .form-section.grid-2
             .half.left
                 label(for='startDate') Start Date:
-                input#startDate(type='date' value='2004-01-05')
+                input#startDate(type='date' value='2019-01-05')
             .half.right
                 span
                 label(for='endDate') End Date:
-                input#endDate(type='date' value='2004-01-12')
+                input#endDate(type='date' value='2019-01-12')
         .form-section
             .grid-2
                 div
@@ -45,8 +40,7 @@ block main
                                 .mdc-radio__inner-circle
                         label(for='radio-2') Irregular
             .input-helper(style='margin-top: 10px')
-                i
-                    | This option determines whether the selected days of week below will be displayed on the syllabus&apos; heading
+                i This option determines whether the selected days of week below will be displayed on the syllabus&apos; heading
         .form-section.grid-7
             +checkbox('D1', 'Sun')
             +checkbox('D2', 'Mon')
@@ -58,11 +52,11 @@ block main
         .form-section.grid-2
             .half.left
                 label(for='dfltStart') Class Starts:
-                input#dfltStart(type='time' name='startTime' value='')
+                input#dfltStart(type='time' name='startTime' value='09:00:00')
             .half.right
                 span
                 label(for='dfltEnd') Class Ends:
-                input#dfltEnd(type='time' name='endTime' value='14:15:00')
+                input#dfltEnd(type='time' name='endTime' value='11:00:00')
         .form-section
             button#MakeMeets.mdc-button.mdc-button--outlined.ripple
                 | Fill out meeting times
@@ -80,15 +74,15 @@ block main
                     input(type='date')
                     button.mdc-icon-button.material-icons.delete-btn
                         i.material-icons delete
-                    b.holiday(style='position: absolute; right: -120px;  top: 15px  ')
+                    b.holiday(style='position: absolute; right: -120px;  top: 15px')
             .form-section.grid-2
                 .half.left
                     label.m-t-10px(for='startDate') Class Starts:
-                    input(type='time' value='11:54:00')
+                    input(type='time' value='09:00:00')
                 .half.right
                     span
                     label.m-t-10px(for='startDate') Class Ends:
-                    input(type='time' value='14:10:00')
+                    input(type='time' value='11:00:00')
             .form-section.full
                 label.m-t-10px Title:
                 input(type='text' value='First Day of Class')
@@ -106,17 +100,10 @@ block main
                         select
                             option(value='0' selected='selected') Berlanga, Carlos
                             option(value='2') Canut, Ignacio
-                            option(value='3') Jagger, Mick
-                            option(value='4') Knowles, Beyonce
-                            option(value='5') Kekul&eacute;, Friedrich
-                            option(value='6') Nixon, Richard
                             option(value='7') Remove Lecturer
                         select
                             option(value='2') Canut, Ignacio
                             option(value='3') Jagger, Mick
-                            option(value='4') Knowles, Beyonce
-                            option(value='5') Kekul&eacute;, Friedrich
-                            option(value='6') Nixon, Richard
                             option(value='7' selected='selected') Add Lecturer
             .form-section
                 label
@@ -135,7 +122,7 @@ block main
                     input#meetDate(type='date')
                     button.mdc-icon-button.material-icons.delete-btn
                         i.material-icons delete
-                    b.holiday(style='position: absolute; right: -120px;  top: 15px  ')
+                    b.holiday(style='position: absolute; right: -120px;  top: 15px')
             .form-section.grid-2
                 .half.left
                     label.m-t-10px(for='startDate') Class Starts:
@@ -161,17 +148,10 @@ block main
                         select
                             option(value='0' selected='selected') Berlanga, Carlos
                             option(value='2') Canut, Ignacio
-                            option(value='3') Jagger, Mick
-                            option(value='4') Knowles, Beyonce
-                            option(value='5') Kekul&eacute;, Friedrich
-                            option(value='6') Nixon, Richard
                             option(value='7') Remove Lecturer
                         select
                             option(value='2') Canut, Ignacio
                             option(value='3') Jagger, Mick
-                            option(value='4') Knowles, Beyonce
-                            option(value='5') Kekul&eacute;, Friedrich
-                            option(value='6') Nixon, Richard
                             option(value='7' selected='selected') Add Lecturer
             .form-section
                 label
@@ -183,9 +163,6 @@ block main
                 i.material-icons add
             button.mdc-icon-button.material-icons.save-btn
                 i.material-icons save
-        .input-helper
-            i
-                | Friendly reminder: Please be sure to reserve time in class for students to complete their Learning Experience Evaluation.
 
     script.
         const current_page = 'events';

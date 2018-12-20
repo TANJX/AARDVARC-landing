@@ -11,8 +11,8 @@ block main
         label.form-title.required(for='Description') Course Description
         .input-helper
             i An expanded version of the description published in the University catalogue.
-            i  Describe the student audience for whom the course is appropriate.
-        textarea#Description.form-control(rows='7')
+            i Describe the student audience for whom the course is appropriate.
+        textarea#Description.form-control(rows='7') How to write a syllabus?
     .form-group
         label.form-title(for='OHTime') Office Hours Time
         .input-helper
@@ -21,34 +21,17 @@ block main
     .form-group
         label.form-title(for='CourseNotes') Course Notes
         .input-helper
-            i
-                | Course Notes include important information on the course that will not appear elsewhere in the syllabus.
-                | This may
-                | include the style of the course/teaching, such as flipped, case-based, project-based, etc.
+            i Course Notes include important information on the course.
         textarea#CourseNotes.form-control(rows='7') Primary lectures will occur on Tuesdays and Thursdays.
     .form-group
         label.form-title(for='DescriptionAssignment') Description and Assessment of Assignments
         .input-helper
-            i
-                | What kind of work is to be done and how should it be completed, i.e. how the learning outcome will be
-                | assessed.
-            i Include any assessment and grading rubrics to be used.
+            i What kind of work is to be done and how should it be completed.
         textarea#DescriptionAssignment.form-control(rows='7')
     .form-group
-        label.form-title(for='EvalInfo') Learning Experience Evaluation Time
+        label.form-title(for='InstructorBio') About the Course Instructor(s)
         .input-helper
-            i
-                | Please set aside time in class for students to complete their Learning Experience Evaluation.
-            i
-                | A minimum of 15 minutes should be used to allow students to complete their evaluation.
-            i
-                | The University&rsquo;s course evaluation window typically opens nine calendar days before the end date.
-        input#EvalInfo.form-control(value='In the last lecture of the semester')
-    .form-group
-        label.form-title(for='InstructorBio') About the Course Coordinator(s) / Instructor(s)
-        .input-helper
-            i
-                | Please add any information about the coordinators and instructors for the course.
+            i Please add any information about the instructors.
         textarea#InstructorBio.form-control(rows='7')
 
     script.
