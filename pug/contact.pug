@@ -9,13 +9,45 @@ block style
 block content
     .hero
         h1 Contact Us
-    .wrapper
-        .creators.container
-            h2.section-title Form
-            input
-            textarea(row='7')
 
-    .contact.container
-        .inner-container
-            h3 Interested in a Demo?
-            button.btn.btn-fill(type='button', onclick='contact();') CONTACT US
+    .container.main
+        .left-div
+            h3#wait(style='display: none') Please wait a few seconds...
+            form#contact-form(method='post', action='http://localhost:8000/api/email', onsubmit="return validate()")
+                .line.two
+                    .left
+                        label.required(for='name') Name
+                        input#name(name='name', required)
+                    .right
+                        label.required(for='org') Organization/Institution
+                        input#org(name='org', required)
+                .line.two
+                    .left
+                        label.required(for='email') Email
+                        input#email(name='email', type='email' required)
+                    .right
+                        label(for='phone') Phone
+                        input#phone(name='phone')
+                .line.full
+                    label.required(for='phone') Title
+                    input#title(name='title')
+                .line.full
+                    label.required(for='msg') Message
+                    textarea#msg(name='msg', rows='7', required)
+                .line.full
+                    button.btn.btn-fill(id='submit', type='submit') SUBMIT
+        .right-div
+            ul
+                li Request a demo
+                li Ask questions
+                li Arrange for a meeting
+
+block append script
+    script.
+        function validate() {
+            $('#submit').attr('disabled', true);
+            $('form').fadeOut(function () {
+                $('#wait').fadeIn();
+            });
+            return true;
+        }

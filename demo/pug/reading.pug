@@ -1,0 +1,19 @@
+extends _syllabus_main
+
+block main
+    h2.form-title Readings
+    h4 Readings and Materials
+    p List any required readings and supplementary materials.  Note where to access/purchase.
+    .entry.entry__button
+        button.mdc-icon-button.material-icons.delete-btn(type='button')
+            i.material-icons delete
+        input(type='text', value='How to Use AARDVARC')
+    .entry.entry__button
+        button.mdc-icon-button.material-icons.delete-btn(type='button')
+            i.material-icons delete
+        input(type='text')
+    button.mdc-icon-button.material-icons(type='button')
+        i.material-icons add
+
+    script.
+        const current_page = 'reading';

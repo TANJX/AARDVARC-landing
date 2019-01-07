@@ -47,6 +47,10 @@ input:not(.mdc-text-field__input):disabled {
   margin: 5px 0;
 }
 
+.entry__button input {
+  width: calc(100% - 50px);
+}
+
 .entry, .entry-add {
   margin: 25px 0;
   position: relative;
@@ -74,7 +78,7 @@ input:not(.mdc-text-field__input):disabled {
 
 .entry .mdc-icon-button {
   position: absolute;
-  right: -40px;
+  right: 0;
   top: -7px;
 }
 

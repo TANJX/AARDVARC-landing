@@ -35,17 +35,19 @@ body
                 i.material-icons(style='font-size: 16px') arrow_back_ios
                 | Go Back
         #menu-links.mdc-list
-            a#CourseBasics.mdc-list-item.ripple(href='basic')
+            a.mdc-list-item.ripple(href='basic')
                 | Course Basics
-            a#Instructors.mdc-list-item.ripple(href='instructors')
+            a.mdc-list-item.ripple(href='instructors')
                 | Instructors
-            a#Checkbox_4.mdc-list-item.ripple(href='methods')
+            a.mdc-list-item.ripple(href='reading')
+                | Readings & Materials
+            a.mdc-list-item.ripple(href='methods')
                 | Teaching & Assessment Methods
-            a#Grading.mdc-list-item.ripple(href='grading')
+            a.mdc-list-item.ripple(href='grading')
                 | Grading Breakdown
-            a#MeetingTimes.mdc-list-item.ripple(href='events')
+            a.mdc-list-item.ripple(href='events')
                 | Course Schedule
-            a#MakeDocument.mdc-list-item.ripple(href='genpdf')
+            a.mdc-list-item.ripple(href='genpdf')
                 | Generate Syllabus PDF
     .main
         .main-wrapper
@@ -76,7 +78,11 @@ body
                         | This is a demo version of AARDVARC Syllabus Tool.
                         | Only partial features and pages are available.
                         | Saving is disabled.
-                        | For a full demo, please contact
+                        | For a full demo, please
+                        |
+                        a(href='../contact', target='_blank') click here
+                        |
+                        | or contact
                         |
                         a(href='mailto:aardvarc@usc.edu') aardvarc@usc.edu
                 footer.mdc-dialog__actions
