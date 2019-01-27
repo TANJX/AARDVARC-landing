@@ -73,12 +73,12 @@ input:not(.mdc-text-field__input):disabled {
 
 .entry .select-coord {
   margin-right: 5px;
-  width: 24%;
+  width: 22%;
 }
 
 .entry .mdc-icon-button {
   position: absolute;
-  right: 0;
+  right: -10px;
   top: -7px;
 }
 

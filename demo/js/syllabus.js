@@ -7,21 +7,21 @@ function warn(msg) {
 }
 
 function popupPrompt(msg, time, color) {
-    $p = $('<div class="mdc-snackbar mdc-snackbar--align-start"' +
-        ' aria-live="assertive"' +
-        ' aria-atomic="true"' +
-        ' aria-hidden="true">' +
-        '<div class="mdc-snackbar__text"></div>' +
-        '<div class="mdc-snackbar__action-wrapper">' +
-        '<button type="button" class="mdc-snackbar__action-button"></button>' +
+    $p = $('<div class="mdc-snackbar">' +
+        '<div class="mdc-snackbar__surface">' +
+        '<div class="mdc-snackbar__label"' +
+        ' role="status"' +
+        ' aria-live="polite">' +
+        'Prompt Message' +
+        '</div>' +
         '</div>' +
         '</div>');
     $('body').append($p);
     if (typeof color !== "undefined") {
-        $p.css('backgroundColor', color);
+        $p.find('.mdc-snackbar__surface').css('backgroundColor', color);
     }
     if (typeof time === "undefined") {
-        time = 2750;
+        time = 4000;
     }
     if (!snackbar_complete) {
         clearTimeout(snackbar_timeout_function);
@@ -30,24 +30,24 @@ function popupPrompt(msg, time, color) {
     snackbar_element = $p;
     snackbar_complete = false;
     let snackbar = new mdc.snackbar.MDCSnackbar($p[0]);
+    snackbar.timeoutMs = time;
+    snackbar.labelText = msg;
     setTimeout(function () {
-        snackbar.show({
-            message: msg,
-            timeout: time
-        });
+        snackbar.open();
     }, 100);
     snackbar_timeout_function = setTimeout(function () {
         snackbar_element.remove();
         snackbar_complete = true;
-    }, time + 300);
+    }, time + 1000);
 }
 
+
 function updateField() {
-    $('.main-wrapper .ripple').each(function () {
+    $('.ripple').each(function () {
         mdc.ripple.MDCRipple.attachTo($(this)[0]);
     });
 
-    $('.main-wrapper .mdc-icon-button').each(function () {
+    $('.mdc-icon-button').each(function () {
         const iconButtonRipple = new mdc.ripple.MDCRipple($(this)[0]);
         iconButtonRipple.unbounded = true;
     });
@@ -112,9 +112,14 @@ function getCookie(key) {
 }
 
 if (getCookie('visited') === -1) {
-// first visit
+    // first visit
     let expires = new Date(Date.now() + 60 * 60 * 1000);
     document.cookie = "visited=true; expires=" + expires.toUTCString() + "; path= /aardvarc/demo/";
     const dialog = new mdc.dialog.MDCDialog($('#dialog')[0]);
-    dialog.open()
+    dialog.open();
+    dialog.listen('MDCDialog:closed', function (e) {
+        $('.request').addClass("enter-screen")
+    });
+} else {
+    $('.request').addClass("enter-screen")
 }

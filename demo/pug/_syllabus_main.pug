@@ -49,6 +49,10 @@ body
                 | Course Schedule
             a.mdc-list-item.ripple(href='genpdf')
                 | Generate Syllabus PDF
+        .request.off-screen
+            button.mdc-fab.mdc-fab--extended.mdc-fab--mini.ripple(onclick='window.open("../contact")')
+                span.material-icons.mdc-fab__icon apps
+                span.mdc-fab__label Request Full Demo
     .main
         .main-wrapper
             #main-form
