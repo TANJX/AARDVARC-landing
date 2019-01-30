@@ -7,19 +7,30 @@ block style
     link(rel='stylesheet', href='css/contact.css')
 
 block content
-    .hero
-        h1 Contact Us
-
     .container.main
         .left-div
+            h1 Contact Us
+            p Let's talk about everything!
+            ul.actions
+                li
+                    img(src='img/contact-demo.svg', alt='demo icon')
+                    | Request a demo
+                li
+                    img(src='img/contact-question.svg', alt='question icon')
+                    | Ask questions
+                li
+                    img(src='img/contact-meeting.svg', alt='meeting icon')
+                    | Arrange for a meeting
+        .right-div
             h3#wait(style='display: none') Please wait a few seconds...
             form#contact-form(method='post', action='http://app.acadoinformatics.com/api/email', onsubmit="return validate()")
+                h3  Say Hello!
                 .line.two
                     .left
                         label.required(for='name') Name
                         input#name(name='name', required)
                     .right
-                        label.required(for='org') Organization/Institution
+                        label.required(for='org') Institution/Department
                         input#org(name='org', required)
                 .line.two
                     .left
@@ -36,11 +47,6 @@ block content
                     textarea#msg(name='msg', rows='7', required)
                 .line.full
                     button.btn.btn-fill(id='submit', type='submit') SUBMIT
-        .right-div
-            ul
-                li Request a demo
-                li Ask questions
-                li Arrange for a meeting
 
 block append script
     script.
