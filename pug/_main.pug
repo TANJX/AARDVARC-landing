@@ -31,12 +31,35 @@ body
                         | Automated Approach to Reviewing and Developing Valuable Assessment Resources for your Curriculum
             .menu
                 ul
-                    li: a(href='#') Features
+                    li: a(href='index') Features
                     li: a(href='faq') FAQ
                     li: a(href='about') About
                     li: a(href='contact') Contact
                     li: a(href='demo' target='_blank') Demo
 
+            .mobile-menu
+                .menu--btn
+                    .menu--btn__line
+                    .menu--btn__line
+                    .menu--btn__line
+
+        .menu--items
+            .menu--item.container: ul
+                li: a(href='index')
+                    span Features
+                    span Syllabus, Management, Report
+                li: a(href='faq')
+                    span FAQ
+                    span Get Answered
+                li: a(href='about')
+                    span About
+                    span Our Story
+                li: a(href='contact')
+                    span Contact
+                    span Ask us Anything
+                li: a(href='demo' target='_blank')
+                    span Demo
+                    span A Quick Demo
     block content
     footer
         .container
@@ -59,3 +82,4 @@ body
         script(src='lib/jquery-ui.min.js')
         script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
         script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+        script(src='js/menu.js')

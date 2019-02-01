@@ -2,6 +2,7 @@
 @import "global";
 @import "header";
 @import "footer";
+@import "menu";
 
 .hero {
   height: 250px;
@@ -116,7 +117,7 @@ form {
   }
 }
 
-@media (max-width: 993px) {
+@media (max-width: 992px) {
   .main {
     display: block;
 

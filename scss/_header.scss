@@ -34,8 +34,13 @@ header {
 
 
 @media screen and (max-width: 991px) {
-  header .menu {
-    display: none;
+  header {
+    .menu {
+      display: none;
+    }
+    .mobile-menu {
+      display: inline-block;
+    }
   }
 }
 
@@ -50,6 +55,9 @@ header {
     font-weight: lighter;
     position: relative;
 
+    &:first-of-type {
+      margin-left: 0;
+    }
 
     &:hover::after {
       content: '';
@@ -67,4 +75,8 @@ header {
       }
     }
   }
+}
+
+.mobile-menu {
+  display: none;
 }
