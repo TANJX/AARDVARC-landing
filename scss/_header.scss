@@ -38,6 +38,7 @@ header {
     .menu {
       display: none;
     }
+
     .mobile-menu {
       display: inline-block;
     }
@@ -70,6 +71,7 @@ header {
 
     a {
       color: #eee;
+
       &:hover {
         text-decoration: none;
       }

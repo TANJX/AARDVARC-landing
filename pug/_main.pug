@@ -37,11 +37,10 @@ body
                     li: a(href='contact') Contact
                     li: a(href='demo' target='_blank') Demo
 
-            .mobile-menu
-                .menu--btn
-                    .menu--btn__line
-                    .menu--btn__line
-                    .menu--btn__line
+            .mobile-menu: .menu--btn
+                .menu--btn__line
+                .menu--btn__line
+                .menu--btn__line
 
         .menu--items
             .menu--item.container: ul
@@ -60,6 +59,7 @@ body
                 li: a(href='demo' target='_blank')
                     span Demo
                     span A Quick Demo
+
     block content
     footer
         .container

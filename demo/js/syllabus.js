@@ -1,45 +1,49 @@
-let snackbar_element = null;
-let snackbar_complete = true;
-let snackbar_timeout_function;
+let snackbar_module = (function () {
+    let snackbar_element = null;
+    let snackbar_complete = true;
+    let snackbar_timeout_function;
 
-function warn(msg) {
-    popupPrompt(msg, 5000, '#fa4f2f');
-}
+    function warn(msg) {
+        prompt(msg, 5000, '#fa4f2f');
+    }
 
-function popupPrompt(msg, time, color) {
-    $p = $('<div class="mdc-snackbar">' +
-        '<div class="mdc-snackbar__surface">' +
-        '<div class="mdc-snackbar__label"' +
-        ' role="status"' +
-        ' aria-live="polite">' +
-        'Prompt Message' +
-        '</div>' +
-        '</div>' +
-        '</div>');
-    $('body').append($p);
-    if (typeof color !== "undefined") {
-        $p.find('.mdc-snackbar__surface').css('backgroundColor', color);
+    function prompt(msg, time, color) {
+        $p = $('<div class="mdc-snackbar">' +
+            '<div class="mdc-snackbar__surface">' +
+            '<div class="mdc-snackbar__label"' +
+            ' role="status"' +
+            ' aria-live="polite">' +
+            'Prompt Message' +
+            '</div>' +
+            '</div>' +
+            '</div>');
+        $('body').append($p);
+        if (typeof color !== "undefined") {
+            $p.find('.mdc-snackbar__surface').css('backgroundColor', color);
+        }
+        if (typeof time === "undefined") {
+            time = 4000;
+        }
+        if (!snackbar_complete) {
+            clearTimeout(snackbar_timeout_function);
+            snackbar_element.remove();
+        }
+        snackbar_element = $p;
+        snackbar_complete = false;
+        let snackbar = new mdc.snackbar.MDCSnackbar($p[0]);
+        snackbar.timeoutMs = time;
+        snackbar.labelText = msg;
+        setTimeout(function () {
+            snackbar.open();
+        }, 100);
+        snackbar_timeout_function = setTimeout(function () {
+            snackbar_element.remove();
+            snackbar_complete = true;
+        }, time + 1000);
     }
-    if (typeof time === "undefined") {
-        time = 4000;
-    }
-    if (!snackbar_complete) {
-        clearTimeout(snackbar_timeout_function);
-        snackbar_element.remove();
-    }
-    snackbar_element = $p;
-    snackbar_complete = false;
-    let snackbar = new mdc.snackbar.MDCSnackbar($p[0]);
-    snackbar.timeoutMs = time;
-    snackbar.labelText = msg;
-    setTimeout(function () {
-        snackbar.open();
-    }, 100);
-    snackbar_timeout_function = setTimeout(function () {
-        snackbar_element.remove();
-        snackbar_complete = true;
-    }, time + 1000);
-}
+
+    return {warn: warn, prompt: prompt};
+})();
 
 
 function updateField() {
@@ -70,7 +74,7 @@ updateField();
 $('.left-col .mdc-list-item[href="' + current_page + '"]').addClass('active');
 
 $("#save-btn").click(function () {
-    warn('Saving is disabled in the demo')
+    snackbar_module.warn('Saving is disabled in the demo')
 });
 
 $("#back-btn").click(function () {
@@ -87,7 +91,7 @@ $("#continue-btn").click(function () {
 });
 
 $('#gen-btn').click(function () {
-    warn('Syllabus generation is simulated in the demo');
+    snackbar_module.warn('Syllabus generation is simulated in the demo');
     $(this).attr('disabled', true);
     $('#pdf-status').show();
     setTimeout(function () {
