@@ -134,4 +134,15 @@ form {
       margin-top: 50px;
     }
   }
+
+  form {
+    .two {
+      display: block;
+    }
+
+    .left, .right {
+      width: 100%;
+      margin: 12px 0;
+    }
+  }
 }
