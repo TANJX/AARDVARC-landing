@@ -48,7 +48,6 @@ function jumpto(div) {
         startPos = e.originalEvent.touches[0].pageX;
     });
     $el.on('touchend', function (e) {
-        console.log('touchend');
         let now = Date.now();
         if (time > 0 && now - time < 1000) {
             if (currentPos - startPos > 50) {
