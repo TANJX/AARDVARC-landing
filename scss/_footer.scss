@@ -46,6 +46,31 @@
   }
 }
 
+
+@media screen and (max-width: 767px) {
+  .contact {
+    width: 95%;
+
+    .flex-box {
+      flex-wrap: wrap;
+      padding: 20px 0 25px;
+
+      * {
+        width: 100%;
+        text-align: center;
+      }
+
+      p {
+        margin: 16px 0 25px;
+      }
+
+      button {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
 footer {
   margin-top: -50px;
   padding-top: 100px;
@@ -60,9 +85,11 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .left p {
       color: #666;
     }
+
     .right img {
       height: 100px;
     }
@@ -73,6 +100,7 @@ footer {
     text-align: center;
     margin-top: 90px;
     padding-bottom: 10px;
+
     p {
       margin: 0;
       color: #666;
