@@ -63,28 +63,6 @@
   }
 }
 
-// QUOTE 
-.quote {
-  border-bottom: 1px solid #333;
-  border-top: 1px solid #333;
-  padding: 30px 0 50px;
-
-  .top {
-    max-width: 650px;
-    margin: 0 auto 30px;
-    font-weight: bold;
-    font-size: .8rem;
-  }
-
-  .content {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    text-align: justify;
-    list-style: square;
-  }
-}
-
 // FEATURES
 .features {
   padding: 0 0 40px;
@@ -148,6 +126,75 @@
   }
 }
 
+/* QUOTES */
+
+.quotes {
+  background-color: #cd5257;
+  text-align: center;
+  color: white;
+
+  .section-title {
+    padding-bottom: 12px;
+  }
+
+  .quotes-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 75px 0;
+    align-items: flex-end;
+  }
+
+  .quote {
+    width: 30%;
+
+    .quote__box {
+      background-color: #fff;
+      padding: 30px 25px;
+      color: black;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      position: relative;
+
+      p {
+        margin: 0;
+      }
+
+      $size: 10px;
+
+      &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid white;
+        position: absolute;
+        bottom: -$size;
+        left: calc(50% - #{$size});
+      }
+    }
+
+    .quote__img {
+      display: none;
+    }
+
+    .quote__img img {
+      width: 70px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 100%;
+    }
+
+    .quote__text {
+      margin-top: 25px;
+
+      p:first-of-type {
+        font-weight: bold;
+        margin: 0;
+      }
+    }
+  }
+}
 
 /* FAQ */
 
@@ -187,12 +234,6 @@
 
 
 @media screen and (max-width: 767px) {
-  .quote {
-    padding: 30px 0 50px;
-    margin: 0 15px;
-    width: auto;
-  }
-
   .features .cards {
     margin: 0 5px;
     display: block;
