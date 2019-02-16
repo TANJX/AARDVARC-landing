@@ -142,10 +142,17 @@
     justify-content: space-between;
     padding: 75px 0;
     align-items: flex-end;
+    flex-wrap: wrap;
   }
 
   .quote {
     width: 30%;
+
+    @media screen and (max-width: 991px) {
+      width: 100%;
+      max-width: 400px;
+      margin: 20px auto;
+    }
 
     .quote__box {
       background-color: #fff;
