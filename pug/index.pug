@@ -6,10 +6,7 @@ block style
 block content
     .hero
         .container.left
-            p.top
-                | AARDVARC
-                sup &copy;
-                |  is a web-based software used to:
+            p.top !{name} is a web-based software used to:
             ul.content
                 li Manage and centralize syllabi
                 li Streamline the review of syllabi
@@ -110,7 +107,7 @@ block content
     .quotes
         .container
             h2.section-title Testimonials
-            p.section-subtitle People who used AARDVARC have said some nice things...
+            p.section-subtitle People who used !{name} have said some nice things...
             .quotes-wrapper
                 .quote
                     .quote__box
@@ -157,40 +154,81 @@ block content
         h2.section-title Frequently Asked Questions
         .inner-container
             .faq-one
+                p.q What is !{name}?
+                p.a
+                    | !{name} is a web-based software used to manage and centralize syllabi,
+                    | streamline the review and tracking of syllabi, improve curricular and programmatic assessment,
+                    | address faculty workloads, assist with accreditation review, facilitate excellence in teaching initiatives,
+                    | enhance reporting to senior leadership, and improve the overall efficiency of academic and business operations.
+            .faq-one
+                p.q Who benefits from !{name}?
+                .a
+                    h5 Faculty
+                    p
+                        | Faculty benefit from !{name} using easy-to-follow syllabus prompts based on best practices in syllabus development.
+                        | Once the syllabus is created the first time in !{name},
+                        | all syllabus information is saved for the subsequent time the course is taught.
+                        | !{name} will even automatically change the date to the subsequent year the faculty member is teaching.
+                    p
+                        | When new language is added at the University-level on academic conduct and support systems,
+                        | !{name} makes the change for faculty members.
+                        | Rather than faculty having to go through their syllabus each semester and checking their hyperlinks and ensuring that they have appropriately updated wording,
+                        | !{name} notifies faculty members of the change from the University and then automatically updates their syllabus with this new language.
+                    p
+                        | !{name} also streamlines many business processes for faculty including requests to the administration for additional lecturers to receive a course evaluation,
+                        | requests for guest parking, and requests for payment for outside lecturers.
+                    p
+                        | In addition to the academic and business office processes above,
+                        | !{name} also helps faculty with their faculty merit review process by calculating the faculty hours he/she taught,
+                        | along with the subject matters taught.
+                    h5 Administrators
+                    p
+                        | Administrators benefit from !{name} by easily tracking the status of each syllabus,
+                        | viewing all of the syllabi in one place, ensuring the accuracy of syllabi by standardizing the syllabus template,
+                        | having the ability to easily send e-mail reminders to faculty to complete specific academic and business operations
+                        | (e.g. submitting their syllabus), managing e-mail templates, and managing the biographies,
+                        | curriculum vitae, and resumes of guest lecturers coming into the classroom.
+                    p
+                        | In addition the many benefits above, !{name}-LIVES (Live Information Valuable in Each Syllabus) provides live analytics on each program,
+                        | based on what has been submitted in each syllabus, including program outcomes, teaching methods,
+                        | assessment methods, average number of teaching hours each semester/year, distribution of teaching hours by program,
+                        | the type of instructors teaching in the classroom, and the amount of money being spent on outside lecturers teaching in each program.
+                    p
+                        | Any type of query that you create can be built so that it automatically runs each semester,
+                        | including queries on your curriculum, assessment, accreditation, faculty affairs, business affairs, and more.
+                    h5 Students
+                    p
+                        | Students benefit from syllabi built in !{name} with its complete standardization and knowing exactly where to look in the syllabus for specific information.
+                        | By guiding faculty through best practices in syllabus development,
+                        | syllabi are created with students in mind to ensure information is clear, accurate, and complete.
+            .faq-one
                 p.q What do I need to get started?
                 p.a
-                    | Getting started with AARDVARC
-                    sup &copy;
-                    |  is simple. Simply schedule a meeting with us to go over your exact needs. Very often, at a minimum, we will ask clients to provide us with
+                    a(href='files/AARDVARC-Checklist.pdf', target='_blank') This list
                     |
-                    a(href='files/AARDVARC-Checklist.pdf', target='_blank') this information
-                    |  as part of the initial setup.
+                    | is a helpful guide to what we will ask our clients to provide us during the initial setup.
+                    | Please
+                    |
+                    a(href='contact', target='_blank') contact us
+                    |
+                    | so that we can help you get started.
             .faq-one
                 p.q
-                    | Can you customize AARDVARC
-                    sup &copy;
-                    |  for our School/Department?
+                    | Can you customize !{name} for our School/Department?
                 p.a
-                    | Absolutely. While most sections of the AARDVARC
-                    sup &copy;
-                    |  syllabus are applicable to any School/Department, we can customize its features based on the needs of your individual institution.
+                    | Absolutely. While most sections of the !{name} syllabus are applicable to any School/Department, we can customize its features based on the needs of your institution.
             .faq-one
                 p.q What types of support do you provide before, during, and after implementation?
                 p.a
-                    | We offer a wide range of support services to our clients before, during, and after implementation that available both online and in-person. You can always expect a response from the AARDVARC
-                    sup &copy;
-                    |  team within 24 hours of reaching out to us.
+                    | We offer a wide range of support services to our clients before, during, and after implementation that available both online and in-person. You can always expect a response from the !{name} team within 24 hours of reaching out to us.
             .faq-one
                 p.q
-                    | I'm really interested in using AARDVARC
-                    sup &copy;
-                    | . How long will it take to implement AARDVARC
-                    sup &copy;
-                    |  at my institution?
-                p.a
-                    | At present AARDVARC
-                    sup &copy;
-                    |  is still under development and will be ready for release by late November. This means that you can weigh in on what features are most important to you and we may be able to incorporate them into the final product.
+                    | I'm really interested in using !{name}. How long will it take to implement !{name} at my institution?
+                .a
+                    p
+                        | Once your institution has signed an agreement, the initial implementation process will begin within 12 business days.
+                    p
+                        | The full implementation of the software will be made within 60 business days and training will commence within 12 business days from the date of the full implementation.
 
 block append script
     script(src="js/index.js")
