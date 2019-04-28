@@ -1,6 +1,13 @@
 $primary-color: #b92228;
 $primary-color-active: #ac0a11;
 
+a {
+  color: $primary-color;
+}
+
+a:hover {
+  color: $primary-color-active;
+}
 
 .inner-container {
   margin: 0 80px;
