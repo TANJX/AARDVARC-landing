@@ -8,12 +8,12 @@ head
     // Global site tag (gtag.js) - Google Analytics
     script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-126098284-1')
     script.
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-126098284-1');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-126098284-1');
     // Bootstrap CSS
     link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
     block style
@@ -24,16 +24,21 @@ head
         | AARDVARC &copy;
 
 body
-    header.clearfix
-        .header.container
+    header.usc-header
+        .container
+            a(href='http://usc.edu')
+                img(src='img/usc-logo.png' alt='usc logo')
+                //img(src='img/usc-logo-white.png' alt='usc logo')
+    header
+        .container
             a(href='index')
                 .logo-div
-                    img(src='img/logo-white.svg')
+                    img(src='img/logo-white.svg' alt='aardvarc logo')
                     p
                         | Automated Approach to Reviewing and Developing Valuable Assessment Resources for your Curriculum
             .menu
                 ul
-                    li: a(href='index') Features
+                    li: a(href='story') Story
                     li: a(href='faq') FAQ
                     li: a(href='about') About
                     li: a(href='contact') Contact
@@ -91,5 +96,5 @@ body
         script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
         script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
         script.
-            console.log('Mars Inc. 2019.');
+          console.log('Mars Inc. 2019.');
         script(src='js/menu.js')

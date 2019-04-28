@@ -1,3 +1,17 @@
+header.usc-header {
+  background-color: black;
+  //background-color: #fdfdfd;
+  //border-bottom: 1px solid #333;
+  height: 60px;
+
+  .container a {
+    margin-left: auto;
+    img {
+      height: 55px;
+    }
+  }
+}
+
 header {
   height: 90px;
   background-color: $primary-color;
