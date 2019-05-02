@@ -65,6 +65,8 @@
         height: 20px;
         margin-right: 30px;
         cursor: pointer;
+        filter: grayscale(100%);
+        opacity: 0.7;
       }
     }
 

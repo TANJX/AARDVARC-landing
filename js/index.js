@@ -16,6 +16,75 @@ function jumpto(div) {
   });
 }
 
+// news
+(function () {
+  const NEWS = [
+    {
+      date: 'February 8, 2019',
+      content: 'Presented at Center for Excellence in Teaching (CET) Instructional Design Advisory Group'
+    },
+    {
+      date: 'February 11, 2019',
+      content: 'Presented to the USC Annenberg School for Communication and Journalism'
+    },
+    {
+      date: 'February 27, 2019',
+      content: 'Presented at a Teaching Deans meeting with Ginger Clark, Assistant Vice Provost for Academic and Faculty Affairs and other faculty involved with implementing the new excellence in teaching initiative'
+    },
+    {
+      date: 'March 5, 2019',
+      content: 'Presented to the USC Rossier School of Education'
+    },
+    {
+      date: 'March 6, 2019',
+      content: 'Meeting with Ingrid Steiner, Instructional Designer at the Center for Excellence in Teaching, focused on making AARDVARC© WCAG (Web Content Accessibility Guidelines) compatible.'
+    },
+    {
+      date: 'April 11, 2019',
+      content: 'Meeting with Mark Todd, Vice Provost for Academic Operations, Greg Condell, Vice President of Finance, and USC’s Academic Senior Business Officers to discuss how AARDVARC can be used to help inform financial/business operations'
+    },
+    {
+      date: 'July 13, 2019 - July 17, 2019',
+      content: 'Selected to present at 2019 <a href="https://www.aacp.org/events/annual-meetings" target="_blank">AACP Annual Meeting</a> in Chicago, IL'
+    },
+  ];
+
+  NEWS.reverse();
+
+  let current = 0;
+  const $content = $('.news-content');
+  const $date = $('.news-date');
+  const $prev = $('.prev-news');
+  const $next = $('.next-news');
+
+  update();
+
+  $prev.click(() => {
+    if (current === 0) return;
+    current--;
+    update();
+  });
+
+  $next.click(() => {
+    if (current === NEWS.length - 1) return;
+    current++;
+    update();
+  });
+
+  function update() {
+    if (current === 0) {
+      $prev.addClass('hide');
+    } else if (current === NEWS.length - 1) {
+      $next.addClass('hide');
+    } else {
+      $next.removeClass('hide');
+      $prev.removeClass('hide');
+    }
+    $content.html(NEWS[current].content);
+    $date.html(NEWS[current].date);
+  }
+})();
+
 // carousel
 (function () {
   let $el = $('#carouselControls');

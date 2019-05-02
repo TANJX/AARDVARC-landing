@@ -67,6 +67,56 @@
   @import 'index_browser';
 }
 
+.news {
+  border-top: 1px solid #ccc;
+  margin-bottom: 70px;
+  position: relative;
+
+  .news-content {
+    width: calc(100% - 50px);
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  .news-date {
+    margin-top: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #cd5257;
+    letter-spacing: 0.133rem;
+    text-transform: uppercase;
+  }
+
+  .news-controller {
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      height: 25px;
+      filter: grayscale(100%);
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.hide:hover {
+        cursor: default;
+      }
+
+      &.hide {
+        opacity: 0;
+      }
+    }
+  }
+}
+
 // FEATURES
 .features {
   padding: 0 0 40px;
