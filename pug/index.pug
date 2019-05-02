@@ -4,19 +4,32 @@ block style
     link(rel='stylesheet', href='css/index.css')
 
 block content
+    // hero
     .hero
-        .container.left
-            p.top !{name} is a web-based software used to:
-            ul.content
-                li Manage and centralize syllabi
-                li Streamline the review of syllabi
-                li Improve curricular and programmatic assessment
-                li Address faculty workloads
-                li Facilitate accreditation review
-                li Enhance reporting available to senior leadership
-                li Improve the overall efficiency of academic and business operations
-        .right
-            img(src='img/hero-img.png')
+        .container
+            .title
+                h1 !{name}
+                h2 Digging Deep into your Curriculum
+            .browser-wrapper.inner-container
+                .browser
+                    .window-bar
+                        .control-btn
+                            .red-btn
+                            .yellow-btn
+                            .green-btn
+                    .link-bar
+                        .nav-btn
+                            img(src='img/left-arrow.svg' alt='left arrow')
+                            img(src='img/right-arrow.svg' alt='right arrow')
+                        .address-bar
+                    .content-pane
+                        img(src='img/aardvarc-2.png' class='hero-preview-img')
+
+    // news
+
+
+
+    // features
     .wrapper
         .features.container
             h2.section-title Features
@@ -44,6 +57,8 @@ block content
                         ul.content
                             li Enhance reporting available to senior leadership
                             li Improve the overall efficiency of academic and business operations
+
+    // preview
     .preview.container
         h2.section-title How Does it Work
         .controls
@@ -90,6 +105,8 @@ block content
                 a.carousel-control-next(href='#carouselControls', role='button', data-slide='next')
                     span.carousel-control-next-icon(aria-hidden='true')
                     span.sr-only Next
+
+    // creators
     .wrapper
         .creators.container
             h2.section-title Creators
@@ -104,6 +121,7 @@ block content
                     img.avatar(src='img/dab.jpg')
                     p.name Dab Brill, PhD
 
+    // quotes
     .quotes
         .container
             h2.section-title Testimonials
@@ -150,6 +168,7 @@ block content
                         p.quote__text__title Lecturer of Pharmacology and Pharmaceutical Sciences
                         p.quote__text__title USC School of Pharmacy
 
+    // faq
     .faq.container
         h2.section-title Frequently Asked Questions
         .inner-container
