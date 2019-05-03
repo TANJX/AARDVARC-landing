@@ -79,6 +79,7 @@
     font-size: 1.05rem;
     line-height: 1.8;
     text-align: center;
+    height: 120px;
   }
 
   .news-date {
@@ -92,27 +93,42 @@
   }
 
   .news-controller {
-    position: absolute;
-    top: 180px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
 
-    img {
-      height: 25px;
-      filter: grayscale(100%);
+    & > div {
+      position: absolute;
+      top: 0;
+      padding: 180px 15px;
 
       &:hover {
         cursor: pointer;
+
+        img {
+          filter: grayscale(80%);
+        }
       }
 
       &.hide:hover {
         cursor: default;
+
       }
 
       &.hide {
         opacity: 0;
       }
+    }
+
+    .prev-news {
+      left: 0;
+    }
+
+    .next-news {
+      right: 0;
+    }
+
+    img {
+      height: 25px;
+      filter: grayscale(100%);
+      transition: .2s;
     }
   }
 }
