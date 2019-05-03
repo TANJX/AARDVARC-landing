@@ -80,6 +80,11 @@
     line-height: 1.8;
     text-align: center;
     height: 120px;
+
+    @media screen and (max-width: 470px) {
+      height: 250px;
+      width: calc(100% - 75px);
+    }
   }
 
   .news-date {
@@ -93,7 +98,6 @@
   }
 
   .news-controller {
-
     & > div {
       position: absolute;
       top: 0;

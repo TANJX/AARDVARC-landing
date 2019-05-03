@@ -16,6 +16,10 @@ function jumpto(div) {
   });
 }
 
+document.getElementsByClassName('hero-preview-img')[0].onload = function () {
+  $('.browser').addClass('fadeInUp');
+};
+
 // news
 (function () {
   const NEWS = [
