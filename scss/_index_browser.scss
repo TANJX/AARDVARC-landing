@@ -1,10 +1,123 @@
 .browser-wrapper {
-  margin: 120px 0 80px;
+  margin: 120px auto 80px;
+  width: calc(100% - 150px);
+  position: relative;
+  user-select: none;
+
+  .browser-controller {
+    opacity: 0;
+
+    & > div {
+      position: absolute;
+      width: 300px;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      align-content: center;
+    }
+
+    .left-side {
+      left: -320px;
+    }
+
+    .right-side {
+      right: -320px;
+    }
+
+    .control-card {
+      width: 100%;
+      height: 95px;
+      margin: 8px 0;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      background-color: #f2f2f2;
+      transition: .3s;
+      cursor: pointer;
+
+      p {
+        margin: 0;
+      }
+
+      .index {
+        color: #b7afa7;
+        font-weight: normal;
+        font-size: 1.1rem;
+        padding: 0 28px;
+      }
+
+      .info {
+        color: #777;
+        font-weight: bold;
+        font-size: .95rem;
+        width: 170px;
+      }
+
+      .mark {
+        width: 12px;
+        height: 12px;
+        margin: 0 17px;
+        border-radius: 100%;
+        opacity: 0;
+      }
+
+      $red: #c1272d;;
+      $yellow: #eab50a;
+      $green: #28c940;;
+
+      &.red .mark {
+        background-color: $red;
+      }
+
+      &.yellow .mark {
+        background-color: $yellow;
+      }
+
+      &.green .mark {
+        background-color: $green;
+      }
+
+      &.selected {
+        &.red {
+          background-color: $red;
+        }
+
+        &.yellow {
+          background-color: $yellow;
+        }
+
+        &.green {
+          background-color: $green;
+        }
+
+        .index, .info {
+          color: white;
+        }
+
+        .mark {
+          background-color: #fff;
+        }
+      }
+
+      &:hover {
+        box-shadow: 0 7px 8px -4px rgba(0, 0, 0, .2),
+        0 13px 19px 2px rgba(0, 0, 0, .14),
+        0 5px 24px 4px rgba(0, 0, 0, .12);
+        transform: translateY(-3px);
+
+        .mark {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
 
   .browser {
     margin: 0 auto;
     height: 800px;
-    width: 100%;
     background-color: #434343;
     border-radius: 10px;
     box-shadow: 0 6px 6px -3px rgba(0, 0, 0, .2),

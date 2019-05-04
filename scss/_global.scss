@@ -1,6 +1,15 @@
 $primary-color: #b92228;
 $primary-color-active: #ac0a11;
 
+::selection {
+  background-color: #a31f25;
+  color: white;
+}
+
+img {
+  user-select: none;
+}
+
 a {
   color: $primary-color;
 }

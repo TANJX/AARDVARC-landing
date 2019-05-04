@@ -16,9 +16,20 @@ function jumpto(div) {
   });
 }
 
-document.getElementsByClassName('hero-preview-img')[0].onload = function () {
-  $('.browser').addClass('fadeInUp');
-};
+(function () {
+  let hero_preview_img = document.getElementsByClassName('hero-preview-img')[0];
+  hero_preview_img.onload = function () {
+    $('.browser').addClass('fadeInUp');
+    $('.browser-controller').addClass('fadeIn');
+  };
+  hero_preview_img.src = 'img/aardvarc-2.png';
+
+  const $cards = $('.control-card');
+  $cards.click(function () {
+    $cards.removeClass('selected');
+    this.classList.add('selected');
+  })
+})();
 
 // news
 (function () {

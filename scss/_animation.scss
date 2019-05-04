@@ -13,8 +13,25 @@
 .fadeInUp {
   opacity: 0;
   transform: translate3d(0, 30%, 0);
-  animation-delay: 1s;
   animation-name: fadeInUp;
   animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  opacity: 0;
+  animation-delay: .8s;
+  animation-name: fadeIn;
+  animation-duration: 1.2s;
   animation-fill-mode: forwards;
 }
