@@ -2,7 +2,6 @@
 (function () {
   let state = false;
 
-  // cache DOM
   let $menu = $('.menu--btn');
   let $menu_bar1 = $menu.find('.menu--btn__line:nth-of-type(1)');
   let $menu_bar2 = $menu.find('.menu--btn__line:nth-of-type(2)');

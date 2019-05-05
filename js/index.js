@@ -1,3 +1,4 @@
+
 function jumpto(div) {
   const target = $(div);
   const distance = Math.abs(target.offset().top - $(document).scrollTop()) / screen.height;
@@ -36,6 +37,7 @@ function jumpto(div) {
     $('.preview-info').addClass('fadeIn');
     loadImages();
   };
+  
   hero_preview_img.src = 'img/preview-1.png';
   hero_preview_img.style.zIndex = '2';
 
@@ -86,6 +88,7 @@ function jumpto(div) {
     this.classList.add('selected');
   })
 })();
+
 
 // news
 (function () {
@@ -155,6 +158,7 @@ function jumpto(div) {
     $date.html(NEWS[current].date);
   }
 })();
+
 
 // carousel
 (function () {

@@ -4,3 +4,6 @@
 *.map
 *.html
 /css/
+node_modules
+*.min.js
+package-lock.json
