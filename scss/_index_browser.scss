@@ -1,5 +1,5 @@
 .browser-wrapper {
-  margin: 120px auto 80px;
+  margin: 120px auto 40px;
   width: calc(100% - 150px);
   position: relative;
   user-select: none;
@@ -46,6 +46,7 @@
         font-weight: normal;
         font-size: 1.1rem;
         padding: 0 28px;
+        transition: .3s;
       }
 
       .info {
@@ -53,6 +54,7 @@
         font-weight: bold;
         font-size: .95rem;
         width: 170px;
+        transition: .3s;
       }
 
       .mark {
@@ -61,6 +63,7 @@
         margin: 0 17px;
         border-radius: 100%;
         opacity: 0;
+        transition: .3s;
       }
 
       $red: #c1272d;;
@@ -79,6 +82,29 @@
         background-color: $green;
       }
 
+      &:hover {
+        box-shadow: 0 7px 8px -4px rgba(0, 0, 0, .2),
+        0 13px 19px 2px rgba(0, 0, 0, .14),
+        0 5px 24px 4px rgba(0, 0, 0, .12);
+        transform: translateY(-3px);
+
+        .mark {
+          opacity: 1;
+        }
+
+        &.red .index {
+          color: $red;
+        }
+
+        &.yellow .index {
+          color: $yellow;
+        }
+
+        &.green .index {
+          color: $green;
+        }
+      }
+
       &.selected {
         &.red {
           background-color: $red;
@@ -93,7 +119,7 @@
         }
 
         .index, .info {
-          color: white;
+          color: white !important;
         }
 
         .mark {
@@ -101,19 +127,8 @@
         }
       }
 
-      &:hover {
-        box-shadow: 0 7px 8px -4px rgba(0, 0, 0, .2),
-        0 13px 19px 2px rgba(0, 0, 0, .14),
-        0 5px 24px 4px rgba(0, 0, 0, .12);
-        transform: translateY(-3px);
-
-        .mark {
-          opacity: 1;
-        }
-      }
     }
   }
-
 
   .browser {
     margin: 0 auto;
@@ -249,4 +264,53 @@
       }
     }
   }
+}
+
+.preview-info {
+  margin-top: 40px;
+
+  p {
+    margin: 0 auto;
+    padding: 0 8px;
+    text-align: center;
+    line-height: 2;
+    font-size: 1.05rem;
+    font-weight: normal;
+    user-select: text;
+    max-width: 800px;
+    color: #777;
+  }
+
+  a {
+    text-decoration: none;
+
+    &.hide {
+      p {
+        opacity: 0;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      p {
+        transform: translate(1px, -2px);
+        text-shadow: 0 7px 8px rgba(0, 0, 0, .2),
+        0 13px 19px rgba(0, 0, 0, .14),
+        0 5px 24px rgba(0, 0, 0, .12);
+      }
+    }
+
+    p {
+      opacity: 1;
+      transition: .2s;
+      padding-top: 20px;
+      color: #F74646;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 0.133rem;
+    }
+  }
+
 }

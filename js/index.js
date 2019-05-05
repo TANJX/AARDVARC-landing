@@ -1,6 +1,6 @@
 function jumpto(div) {
-  var target = $(div);
-  var distance = Math.abs(target.offset().top - $(document).scrollTop()) / screen.height;
+  const target = $(div);
+  const distance = Math.abs(target.offset().top - $(document).scrollTop()) / screen.height;
   $('html, body').animate({
     scrollTop: target.offset().top
   }, 1200, "easeOutExpo", function () {
@@ -16,18 +16,37 @@ function jumpto(div) {
   });
 }
 
+// HERO PREVIEW
 (function () {
+  const TEXT = [
+    'Departmental administrator provides a personal link for faculty/course coordinators to create their syllabi.',
+    'Faculty complete their syllabi through the portal web-based with general course information already pre-populated (course prefix, number, title, section number, and units).',
+    'After filling in all sections of the syllabus template, the syllabus is automatically generated within the University&rsquo;s standard syllabus template, with most up-to-date policies/ procedures and USC branding.',
+    'Administrators have a copy of the syllabus (.doc and .pdf) in one centralized area. Administrators can easily monitor the progress of syllabi and send reminders, to faculty as needed.',
+    'Administrators have a copy of the syllabus (.doc and .pdf) in one centralized area. Administrators can easily monitor the progress of syllabi and send reminders, to faculty as needed.',
+    'Administrators manage department faculties and assign them as course instructors.',
+    'Administrators manage department faculties and assign them as course instructors.',
+    'All data produced from the syllabi are directly connected to a &ldquo;live&rdquo; database. Any updates to syllabi will immediately appear in reports viewed by administrators.',
+  ];
+
   let hero_preview_img = document.getElementsByClassName('hero-preview-img')[0];
   hero_preview_img.onload = function () {
     $('.browser').addClass('fadeInUp');
     $('.browser-controller').addClass('fadeIn');
   };
-  hero_preview_img.src = 'img/aardvarc-2.png';
+  hero_preview_img.src = 'img/preview-1.png';
 
   const $cards = $('.control-card');
+  const $text = $('.preview-info > p');
+  const $demo = $('.preview-info > a');
+
   $cards.click(function () {
+    const i = parseInt($(this).find('.index').html());
+    hero_preview_img.src = `img/preview-${i}.png`;
+    $text.html(TEXT[i - 1]);
     $cards.removeClass('selected');
     this.classList.add('selected');
+    i <= 3 ? $demo.removeClass('hide') : $demo.addClass('hide');
   })
 })();
 
