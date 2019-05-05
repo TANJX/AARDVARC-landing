@@ -33,20 +33,57 @@ function jumpto(div) {
   hero_preview_img.onload = function () {
     $('.browser').addClass('fadeInUp');
     $('.browser-controller').addClass('fadeIn');
+    $('.preview-info').addClass('fadeIn');
+    loadImages();
   };
   hero_preview_img.src = 'img/preview-1.png';
+  hero_preview_img.style.zIndex = '2';
 
   const $cards = $('.control-card');
   const $text = $('.preview-info > p');
   const $demo = $('.preview-info > a');
+  const $img_div = $('.content-pane');
+
+  $text.html(TEXT[0]);
+
+  function loadImages() {
+    for (let i = 2; i <= 8; i++) {
+      const img = new Image();
+      img.src = `img/preview-${i}.png`;
+      img.classList.add('hidden');
+      // $img_div.append(img);
+    }
+  }
+
+  let in_transition_img = null;
 
   $cards.click(function () {
     const i = parseInt($(this).find('.index').html());
-    hero_preview_img.src = `img/preview-${i}.png`;
+
+    if (!in_transition_img) {
+      const $old_img = $('.content-pane img:first-of-type');
+      in_transition_img = $old_img;
+      $old_img.fadeOut(300, function () {
+        $(this).remove();
+        img.style.zIndex = '2';
+        in_transition_img = null;
+      });
+    } else {
+      $('.content-pane img:not(:first-of-type)').remove();
+    }
+
+    // image
+    const img = new Image();
+    img.src = `img/preview-${i}.png`;
+    $img_div.append(img);
+
+    // text
     $text.html(TEXT[i - 1]);
+    i <= 3 ? $demo.removeClass('hide') : $demo.addClass('hide');
+
+    // card
     $cards.removeClass('selected');
     this.classList.add('selected');
-    i <= 3 ? $demo.removeClass('hide') : $demo.addClass('hide');
   })
 })();
 

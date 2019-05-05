@@ -133,7 +133,7 @@
   .browser {
     margin: 0 auto;
     height: 800px;
-    background-color: #434343;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 6px 6px -3px rgba(0, 0, 0, .2),
     0 10px 14px 1px rgba(0, 0, 0, .14),
@@ -210,9 +210,9 @@
 
   .content-pane {
     height: 530px;
-    background-color: black;
 
     img {
+      position: absolute;
       width: 100%;
     }
   }
@@ -268,6 +268,9 @@
 
 .preview-info {
   margin-top: 40px;
+  height: 115px;
+
+  opacity: 0;
 
   p {
     margin: 0 auto;
