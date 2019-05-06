@@ -51,10 +51,12 @@ block content
 block contact
 block append script
     script.
-        function validate() {
-            $('#submit').attr('disabled', true);
-            $('form').fadeOut(function () {
-                $('#wait').fadeIn();
-            });
-            return true;
-        }
+      function validate() {
+        const val = $('#msg').val();
+        if (val.includes('http')) return false;
+        $('#submit').attr('disabled', true);
+        $('form').fadeOut(function () {
+          $('#wait').fadeIn();
+        });
+        return true;
+      }

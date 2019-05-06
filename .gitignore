@@ -5,5 +5,5 @@
 *.html
 /css/
 node_modules
-*.min.js
+/js/*.min.js
 package-lock.json

@@ -17,6 +17,7 @@ function jumpto(div) {
   });
 }
 
+
 // HERO PREVIEW
 (function () {
   const TEXT = [
@@ -37,7 +38,7 @@ function jumpto(div) {
     $('.preview-info').addClass('fadeIn');
     loadImages();
   };
-  
+
   hero_preview_img.src = 'img/preview-1.png';
   hero_preview_img.style.zIndex = '2';
 
