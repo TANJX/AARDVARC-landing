@@ -46,7 +46,7 @@ block content
                     label.required(for='msg') Message
                     textarea#msg(name='msg', rows='7', required)
                 .line.full
-                    button.btn.btn-fill(id='submit', type='submit') SUBMIT
+                    button.btn.btn-fill.g-recaptcha(data-sitekey="6LchhqEUAAAAAMKBy82KyHD0h9bW4cpcMXRsrFHQ", id='submit', type='submit') SUBMIT
 
 block contact
 block append script
@@ -60,3 +60,4 @@ block append script
         });
         return true;
       }
+    script(src='https://www.google.com/recaptcha/api.js')
