@@ -14,6 +14,14 @@ block content
                 button.button.more-btn(onclick='jumpto(".features")') LEARN MORE
                 button.button.contact-btn(onclick='location.href="contact"') CONTACT US
 
+            .def
+                p
+                    | AARDVARC© stands for Automated Approach to Reviewing and Developing Valuable Assessment Resources
+                    | for your Curriculum. The USC School of Pharmacy developed
+                    | and is implementing this new, web-based system to streamline
+                    | and automate procedures ranging from curricular and
+                    | programmatic assessment to business aspects.
+
             .browser-wrapper.inner-container
                 .browser
                     .window-bar
@@ -23,11 +31,20 @@ block content
                             .green-btn
                     .link-bar
                         .nav-btn
-                            img(src='img/left-arrow.svg' alt='left arrow')
-                            img(src='img/right-arrow.svg' alt='right arrow')
+                            img(src='img/left-arrow.svg' alt='left arrow' class='prev')
+                            img(src='img/right-arrow.svg' alt='right arrow' class='next')
                         .address-bar
                     .content-pane
                         img(src='' class='hero-preview-img')
+
+                .browser.pdf-browser
+                    .window-bar
+                        .control-btn
+                            .red-btn
+                            .yellow-btn
+                            .green-btn
+                    .pdf-pane
+                        img(src='img/pdf-preview.png' class='hero-pdf-img')
 
                 .browser-controller
                     .left-side
@@ -275,7 +292,7 @@ block content
             .faq-one
                 p.q What do I need to get started?
                 p.a
-                    a(href='files/AARDVARC-Checklist.pdf', target='_blank') This list
+                    a(href='files/AARDVARC-Setup-Instructions.pdf', target='_blank') This list
                     |
                     | is a helpful guide to what we will ask our clients to provide us during the initial setup.
                     | Please

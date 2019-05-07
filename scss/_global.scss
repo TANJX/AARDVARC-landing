@@ -1,6 +1,24 @@
 $primary-color: #b92228;
 $primary-color-active: #ac0a11;
 
+.container {
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1100px) {
+    max-width: 1040px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
 ::selection {
   background-color: #a31f25;
   color: white;

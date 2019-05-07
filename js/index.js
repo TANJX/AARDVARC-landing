@@ -1,4 +1,3 @@
-
 function jumpto(div) {
   const target = $(div);
   const distance = Math.abs(target.offset().top - $(document).scrollTop()) / screen.height;
@@ -33,7 +32,7 @@ function jumpto(div) {
 
   let hero_preview_img = document.getElementsByClassName('hero-preview-img')[0];
   hero_preview_img.onload = function () {
-    $('.browser').addClass('fadeInUp');
+    $('.browser:not(.pdf-browser)').addClass('fadeInUp');
     $('.browser-controller').addClass('fadeIn');
     $('.preview-info').addClass('fadeIn');
     loadImages();
@@ -46,6 +45,7 @@ function jumpto(div) {
   const $text = $('.preview-info > p');
   const $demo = $('.preview-info > a');
   const $img_div = $('.content-pane');
+  const $pdf = $('.pdf-browser');
 
   $text.html(TEXT[0]);
 
@@ -59,10 +59,9 @@ function jumpto(div) {
   }
 
   let in_transition_img = null;
+  let current = 1;
 
-  $cards.click(function () {
-    const i = parseInt($(this).find('.index').html());
-
+  function switchTo(i) {
     if (!in_transition_img) {
       const $old_img = $('.content-pane img:first-of-type');
       in_transition_img = $old_img;
@@ -86,8 +85,43 @@ function jumpto(div) {
 
     // card
     $cards.removeClass('selected');
-    this.classList.add('selected');
-  })
+    $cards[i - 1].classList.add('selected');
+
+    // pdf preview
+    if (i === 3) {
+      setTimeout(function () {
+        if (current === 3) {
+          $pdf.addClass('fadeInUp');
+        }
+      }, 1500);
+    } else {
+      $pdf.removeClass('fadeInUp');
+    }
+    current = i;
+  }
+
+  $cards.click(function () {
+    const i = parseInt($(this).find('.index').html());
+    switchTo(i);
+  });
+
+  $('.browser .link-bar img.prev').click(function () {
+    if (current > 1) {
+      switchTo(current - 1);
+    }
+  });
+
+  $('.browser .link-bar img.next').click(function () {
+    if (current < 8) {
+      switchTo(current + 1);
+    }
+  });
+
+  $('.pdf-browser .red-btn').click(function () {
+    $pdf.removeClass('fadeInUp');
+  });
+
+
 })();
 
 

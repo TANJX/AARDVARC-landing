@@ -208,6 +208,34 @@
     }
   }
 
+  .browser.pdf-browser {
+    opacity: 0;
+    transition: .5s;
+    z-index: 4;
+    position: absolute;
+    width: 75%;
+    left: 0;
+    right: 0;
+    height: 92%;
+    bottom: -20px;
+    background-color: #434343;
+
+    .red-btn {
+      cursor: pointer;
+    }
+
+    .pdf-pane {
+      position: relative;
+
+      img {
+        width: 80%;
+        display: block;
+        margin: 30px auto 0;
+      }
+    }
+
+  }
+
   width: calc(100% - 150px);
 
   @media screen and (max-width: 1633px) {
@@ -272,9 +300,48 @@
 
   @media screen and (max-width: 1200px) {
     .browser {
-      height: 400px;
+      border-radius: 7px;
+      height: 420px;
+      box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2),
+      0 4px 5px 0 rgba(0, 0, 0, .14),
+      0 1px 10px 0 rgba(0, 0, 0, .12);
     }
 
+    .window-bar {
+      height: 20px;
+
+      .control-btn {
+        margin-left: 12px;
+        padding-top: 5px;
+
+        div {
+          height: 10px;
+          width: 10px;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .link-bar {
+      height: 30px;
+
+      .nav-btn {
+        margin-top: 1px;
+        padding-left: 14px;
+
+        img {
+          height: 15px;
+          margin-right: 16px;
+        }
+      }
+
+      .address-bar {
+        width: calc(100% - 90px);
+        height: 20px;
+        margin-right: 20px;
+        margin-top: 5px;
+      }
+    }
   }
 
   @media screen and (max-width: 991px) {
@@ -334,50 +401,6 @@
 
   @media screen and (max-width: 580px) {
     margin: 80px 0 60px;
-
-    .browser {
-      border-radius: 7px;
-      height: 280px;
-      box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2),
-      0 4px 5px 0 rgba(0, 0, 0, .14),
-      0 1px 10px 0 rgba(0, 0, 0, .12);
-    }
-
-    .window-bar {
-      height: 20px;
-
-      .control-btn {
-        margin-left: 12px;
-        padding-top: 5px;
-
-        div {
-          height: 10px;
-          width: 10px;
-          margin-right: 5px;
-        }
-      }
-    }
-
-    .link-bar {
-      height: 30px;
-
-      .nav-btn {
-        margin-top: 1px;
-        padding-left: 14px;
-
-        img {
-          height: 15px;
-          margin-right: 16px;
-        }
-      }
-
-      .address-bar {
-        width: calc(100% - 90px);
-        height: 20px;
-        margin-right: 20px;
-        margin-top: 5px;
-      }
-    }
 
     .browser-controller > div {
       width: calc(50% - 10px);
@@ -451,7 +474,7 @@
 
     &.hide {
       p {
-        opacity: 0;
+        display: none;
       }
     }
 
