@@ -16,6 +16,34 @@ function jumpto(div) {
   });
 }
 
+(function () {
+  const $logo = $('header .logo-div');
+  const $header = $('header.logo-header');
+  const $preview = $('.preview');
+
+  function update() {
+    let scroll = $(window).scrollTop();
+    let offset = $preview.offset();
+    let pos = offset.top - scroll;
+    if (pos < -110) {
+      $logo.css('opacity', '1');
+      $header.addClass('fixed');
+      setTimeout(function () {
+        $header.addClass('show');
+      }, 10);
+    } else {
+      $logo.css('opacity', '0');
+      $header.removeClass('show');
+      setTimeout(function () {
+        $header.removeClass('fixed');
+      }, 400);
+    }
+  }
+
+  update();
+
+  $(document).scroll(update);
+})();
 
 // HERO PREVIEW
 (function () {

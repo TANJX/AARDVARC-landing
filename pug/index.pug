@@ -7,84 +7,95 @@ block content
     // hero
     .hero
         .container
-            .title
-                h1 !{name}
+            .left
+                .logo
+                    img(src='img/logo-red.svg' alt='AARDVARC logo')
+                .logo.bg-logo
+                    img(src='img/logo-red.svg' alt='AARDVARC logo' class='')
+            .right
                 h2 Digging Deep into your Curriculum
-            .buttons
-                button.button.more-btn(onclick='jumpto(".features")') LEARN MORE
-                button.button.contact-btn(onclick='location.href="contact"') CONTACT US
-
-            .def
                 p
-                    | AARDVARC© stands for Automated Approach to Reviewing and Developing Valuable Assessment Resources
-                    | for your Curriculum. The USC School of Pharmacy developed
-                    | and is implementing this new, web-based system to streamline
-                    | and automate procedures ranging from curricular and
-                    | programmatic assessment to business aspects.
-
-            .browser-wrapper.inner-container
-                .browser
-                    .window-bar
-                        .control-btn
-                            .red-btn
-                            .yellow-btn
-                            .green-btn
-                    .link-bar
-                        .nav-btn
-                            img(src='img/left-arrow.svg' alt='left arrow' class='prev')
-                            img(src='img/right-arrow.svg' alt='right arrow' class='next')
-                        .address-bar
-                    .content-pane
-                        img(src='' class='hero-preview-img')
-
-                .browser.pdf-browser
-                    .window-bar
-                        .control-btn
-                            .red-btn
-                            .yellow-btn
-                            .green-btn
-                    .pdf-pane
-                        img(src='img/pdf-preview.png' class='hero-pdf-img')
-
-                .browser-controller
-                    .left-side
-                        .control-card.red.selected
-                            p.index 01
-                            p.info Course Editor Invitation & List of Contents
-                            .mark
-                        .control-card.red
-                            p.index 02
-                            p.info Course General Information
-                            .mark
-                        .control-card.red
-                            p.index 03
-                            p.info Generate and Upload Syllabus
-                            .mark
-                        .control-card.yellow
-                            p.index 04
-                            p.info Manage Courses by Departments and Semesters
-                            .mark
-                    .right-side
-                        .control-card.yellow
-                            p.index 05
-                            p.info Create new Course
-                            .mark
-                        .control-card.yellow
-                            p.index 06
-                            p.info Manage Instructors by Departments
-                            .mark
-                        .control-card.yellow
-                            p.index 07
-                            p.info Appoint Instructors to Courses
-                            .mark
-                        .control-card.green
-                            p.index 08
-                            p.info Generate Report
-                            .mark
-
-            .preview-info.inner-container
+                    | !{name} stands for
+                    |
+                    b Automated Approach to Reviewing and Developing Valuable Assessment Resources for your Curriculum
+                    | .
                 p
-                a(href='demo' target='_blank').demo: p Check the demo
+                    | The USC School of Pharmacy developed and is implementing this
+                    | new, web-based system to streamline and automate procedures
+                    | ranging from curricular and programmatic assessment to business aspects.
+
+            //.buttons
+            //    button.button.more-btn(onclick='jumpto(".features")') LEARN MORE
+            //    button.button.contact-btn(onclick='location.href="contact"') CONTACT US
+    .hero-color-block
+
+    // quick preview
+    .preview.container
+        .browser-wrapper.inner-container
+            h2 A Quick Preview
+            .browser
+                .window-bar
+                    .control-btn
+                        .red-btn
+                        .yellow-btn
+                        .green-btn
+                .link-bar
+                    .nav-btn
+                        img(src='img/left-arrow.svg' alt='left arrow' class='prev')
+                        img(src='img/right-arrow.svg' alt='right arrow' class='next')
+                    .address-bar
+                .content-pane
+                    img(src='' class='hero-preview-img')
+
+            .browser.pdf-browser
+                .window-bar
+                    .control-btn
+                        .red-btn
+                        .yellow-btn
+                        .green-btn
+                .pdf-pane
+                    img(src='img/pdf-preview.png' class='hero-pdf-img')
+
+            .browser-controller
+                .left-side
+                    .control-card.red.selected
+                        p.index 01
+                        p.info Course Editor Invitation & List of Contents
+                        .mark
+                    .control-card.red
+                        p.index 02
+                        p.info General Course Information
+                        .mark
+                    .control-card.red
+                        p.index 03
+                        p.info Generate and Upload Syllabus
+                        .mark
+                    .control-card.yellow
+                        p.index 04
+                        p.info Manage Courses by Departments and Semesters
+                        .mark
+                .right-side
+                    .control-card.yellow
+                        p.index 05
+                        p.info Create new Course
+                        .mark
+                    .control-card.yellow
+                        p.index 06
+                        p.info Manage Instructors by Departments
+                        .mark
+                    .control-card.yellow
+                        p.index 07
+                        p.info Appoint Instructors to Courses
+                        .mark
+                    .control-card.green
+                        p.index 08
+                        p.info Generate Report
+                        .mark
+
+        .preview-info.inner-container
+            p
+            a(href='demo' target='_blank').demo: p Check the demo
+
 
     // news
     .news.container

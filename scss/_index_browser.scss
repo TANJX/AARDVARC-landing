@@ -1,7 +1,25 @@
+.preview {
+  padding-bottom: 60px;
+
+  @media screen and (max-width: 1195px) {
+    padding-bottom: 0;
+  }
+}
+
 .browser-wrapper {
-  margin: 120px auto 40px;
+  margin: 20px auto 40px;
   position: relative;
   user-select: none;
+
+  & > h2 {
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.133rem;
+    color: $primary-color;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+  }
 
   .browser-controller {
     opacity: 0;
