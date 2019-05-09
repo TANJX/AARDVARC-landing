@@ -5,9 +5,28 @@
 @import "menu";
 @import "animation";
 
-$hero-bg-color: #faf8f5;
 
 .logo-header {
+  background-color: unset;
+
+  .container > a {
+    display: none;
+  }
+
+  .menu {
+    margin-left: auto;
+
+    li {
+      &:hover::after {
+        border-bottom-color: $primary-color;
+      }
+
+      a {
+        color: $primary-color;
+      }
+    }
+  }
+
   transition: .4s;
   transition-timing-function: cubic-bezier(.65, 0, .29, .99);
 
@@ -23,11 +42,12 @@ $hero-bg-color: #faf8f5;
   }
 }
 
+$hero-bg-color: #faf8f5;
+
 // HERO
 .hero {
   padding-top: 70px;
   padding-bottom: 60px;
-  background-color: $hero-bg-color;
 
   .container {
     max-width: 1000px;
@@ -78,7 +98,6 @@ $hero-bg-color: #faf8f5;
     }
   }
 
-
   .buttons {
     margin-top: 50px;
     text-align: center;
@@ -110,14 +129,30 @@ $hero-bg-color: #faf8f5;
       color: #fff;
     }
   }
+
+  .red-circle {
+    position: absolute;
+    width: 65vw;
+    height: 65vw;
+    z-index: -1;
+    border-radius: 100%;
+    background-color: #b92228;
+    top: -32vw;
+    left: -10vw;
+
+    @media screen and (max-width: 1200px) {
+      top: -20vw;
+    }
+  }
 }
 
 .hero-color-block {
   position: absolute;
-  height: 800px;
-  z-index: -1;
+  height: 1250px;
   width: 100%;
   background-color: $hero-bg-color;
+  z-index: -2;
+  top: 0;
 }
 
 @import 'index_browser';
