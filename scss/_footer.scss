@@ -1,5 +1,5 @@
 .contact {
-  background-color: #cd5257;
+  background-color: $primary-color;
   border-radius: 18px;
   color: white;
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2),
@@ -31,7 +31,7 @@
 
     button {
       background-color: #fff;
-      color: #cd5257;
+      color: $primary-color;
       margin-left: auto;
       height: 45px;
       width: 120px;
