@@ -426,12 +426,20 @@
   @media screen and (max-width: 580px) {
     margin: 80px 0 60px;
 
+    .browser {
+      height: 400px;
+    }
+
     .browser-controller > div {
       width: calc(50% - 10px);
     }
   }
 
   @media screen and (max-width: 420px) {
+    .browser {
+      height: 330px;
+    }
+
     .browser-controller .control-card {
       .index {
         font-size: .8rem;
@@ -446,6 +454,10 @@
   }
 
   @media screen and (max-width: 340px) {
+    .browser {
+      height: 280px;
+    }
+
     .browser-controller .control-card {
       .index {
         display: none;

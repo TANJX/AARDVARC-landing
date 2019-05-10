@@ -124,11 +124,12 @@
 .menu--items {
   width: 100%;
   background-color: #b12628;
+  padding-top: 100px;
   display: none;
 
   z-index: 10;
   position: absolute;
-  top: 150px;
+  top: 0;
 
   ul {
     padding: 30px 0;

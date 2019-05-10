@@ -40,9 +40,9 @@ function jumpto(div) {
     }
   }
 
-  update();
+  // update();
 
-  $(document).scroll(update);
+  // $(document).scroll(update);
 })();
 
 // HERO PREVIEW
