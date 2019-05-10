@@ -196,17 +196,49 @@ function jumpto(div) {
 
   update();
 
-  $prev.click(() => {
+  $prev.click(prev);
+  $next.click(next);
+
+  let startPos;
+  let time = -1;
+  let currentPos;
+
+  let $el = $('.news');
+
+  // swiping
+  $el.on('touchstart', function (e) {
+    time = Date.now();
+    startPos = e.originalEvent.touches[0].pageX;
+  });
+  $el.on('touchend', function (e) {
+    const now = Date.now();
+    if (time > 0 && now - time < 1000) {
+      if (currentPos - startPos > 50) {
+        console.log('Swipe Right!!!');
+        prev();
+      } else if (startPos - currentPos > 50) {
+        console.log('Swipe Left!!!');
+        next();
+      }
+    }
+    time = -1;
+  });
+  $el.on('touchmove', function (e) {
+    currentPos = e.originalEvent.touches[0].pageX;
+  });
+
+
+  function prev() {
     if (current === 0) return;
     current--;
     update();
-  });
+  }
 
-  $next.click(() => {
+  function next() {
     if (current === NEWS.length - 1) return;
     current++;
     update();
-  });
+  }
 
   function update() {
     if (current === 0) {
@@ -220,55 +252,4 @@ function jumpto(div) {
     $content.html(NEWS[current].content);
     $date.html(NEWS[current].date);
   }
-})();
-
-
-// carousel
-(function () {
-  let $el = $('#carouselControls');
-  $el.on('slid.bs.carousel', function () {
-    let group = $('.carousel-item.active').attr('group');
-    $('.preview .controls div button').removeClass('selected');
-    $('.preview .controls div button[group="' + group + '"]').addClass('selected');
-  });
-  $('.preview .controls div button').click(function () {
-    let group = $(this).attr('group');
-    let index = $('.preview .carousel-inner [group="' + group + '"]').index();
-    console.log(group + " " + index);
-    $el.carousel(index);
-  });
-  $el.carousel('pause');
-})();
-
-
-// swiping for the carousel
-(function () {
-  let startPos;
-  let time = -1;
-  let currentPos;
-
-  let $el = $('.show');
-  let $carousel = $('#carouselControls');
-
-  $el.on('touchstart', function (e) {
-    time = Date.now();
-    startPos = e.originalEvent.touches[0].pageX;
-  });
-  $el.on('touchend', function (e) {
-    let now = Date.now();
-    if (time > 0 && now - time < 1000) {
-      if (currentPos - startPos > 50) {
-        console.log('Swipe Right!!!');
-        $carousel.carousel('prev');
-      } else if (startPos - currentPos > 50) {
-        console.log('Swipe Left!!!');
-        $carousel.carousel('next');
-      }
-    }
-    time = -1;
-  });
-  $el.on('touchmove', function (e) {
-    currentPos = e.originalEvent.touches[0].pageX;
-  });
-
 })();
