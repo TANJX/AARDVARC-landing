@@ -365,10 +365,10 @@ $hero-bg-color: #faf8f5;
 /* QUOTES */
 
 .quotes {
-  background-color: #cd5257;
-  background-color: $primary-color;
+  //background-color: #cd5257;
+  //background-color: $primary-color;
   text-align: center;
-  color: white;
+  //color: white;
 
   .section-title {
     padding-bottom: 12px;
@@ -377,7 +377,7 @@ $hero-bg-color: #faf8f5;
   .quotes-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 75px 0;
+    padding: 45px 0 75px;
     align-items: flex-end;
     flex-wrap: wrap;
   }
@@ -392,8 +392,10 @@ $hero-bg-color: #faf8f5;
       margin: 20px auto;
     }
 
+    $quote_box_color: #eee;
+
     .quote__box {
-      background-color: #fff;
+      background-color: $quote_box_color;
       padding: 30px 25px;
       color: black;
       margin-bottom: 30px;
@@ -412,7 +414,7 @@ $hero-bg-color: #faf8f5;
         height: 0;
         border-left: $size solid transparent;
         border-right: $size solid transparent;
-        border-top: $size solid white;
+        border-top: $size solid $quote_box_color;
         position: absolute;
         bottom: -$size;
         left: calc(50% - #{$size});
@@ -444,21 +446,6 @@ $hero-bg-color: #faf8f5;
         font-style: italic;
       }
     }
-  }
-}
-
-/* FAQ */
-
-.faq-one {
-  display: grid;
-  margin-bottom: 20px;
-  justify-content: space-between;
-  grid-template-columns: 1fr 1.3fr;
-
-  .q {
-    padding-right: 20px;
-    font-weight: bold;
-    width: 100%;
   }
 }
 
@@ -520,19 +507,4 @@ $hero-bg-color: #faf8f5;
       text-align: center;
     }
   }
-
-  .faq-one {
-    display: block;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #ddd;
-
-    .q {
-      margin-right: 0;
-    }
-
-    .a {
-      width: 100%;
-    }
-  }
-
 }

@@ -1,0 +1,35 @@
+@import "global";
+@import "header";
+@import "footer";
+@import "menu";
+
+/* FAQ */
+
+.faq-one {
+  display: grid;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1.3fr;
+
+  .q {
+    padding-right: 20px;
+    font-weight: bold;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .faq-one {
+    display: block;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+
+    .q {
+      margin-right: 0;
+    }
+
+    .a {
+      width: 100%;
+    }
+  }
+}
