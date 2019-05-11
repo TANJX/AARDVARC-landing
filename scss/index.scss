@@ -144,11 +144,17 @@ $hero-bg-color: #faf8f5;
     position: absolute;
     width: 65vw;
     height: 65vw;
+    max-height: 1300px;
+    max-width: 1300px;
     z-index: -1;
     border-radius: 100%;
     background-color: $primary-color;
     top: -32vw;
     left: -10vw;
+
+    @media screen and (min-width: 2070px) {
+      left: calc(50vw - 1200px);
+    }
 
     @media screen and (max-width: 1200px) {
       top: -20vw;
