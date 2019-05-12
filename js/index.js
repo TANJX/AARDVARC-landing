@@ -182,7 +182,7 @@ function jumpto(div) {
     },
     {
       date: 'July 13, 2019 - July 17, 2019',
-      content: 'Selected to present at 2019 <a href="https://www.aacp.org/events/annual-meetings" target="_blank">AACP Annual Meeting</a> in Chicago, IL'
+      content: 'Selected to present at 2019 <a rel="noreferrer" href="https://www.aacp.org/events/annual-meetings" target="_blank">AACP Annual Meeting</a> in Chicago, IL'
     },
   ];
 
