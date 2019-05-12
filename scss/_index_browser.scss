@@ -15,10 +15,10 @@
     font-size: 0.85rem;
     font-weight: bold;
     letter-spacing: 0.133rem;
-    color: $primary-color;
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 30px;
+    user-select: text;
   }
 
   .browser-controller {
