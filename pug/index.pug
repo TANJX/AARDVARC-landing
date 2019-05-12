@@ -9,7 +9,8 @@ block content
         .container
             .left
                 .logo
-                    img(src='img/logo-white.svg' alt='AARDVARC logo')
+                    img.logo-white(src='img/logo-white.svg' alt='AARDVARC logo')
+                    img.logo-red(src='img/logo-red.svg' alt='AARDVARC logo')
             .right
                 h2 Digging Deep into your Curriculum
                 p
@@ -47,8 +48,8 @@ block content
             //-.buttons
                 button.button.more-btn(onclick='jumpto(".features")') LEARN MORE
                 button.button.contact-btn(onclick='location.href="contact"') CONTACT US
-        .red-circle-wrapper
-            .red-circle.down
+            .red-circle-wrapper
+                .red-circle.down
     .hero-color-block
 
     // quick preview
@@ -63,8 +64,8 @@ block content
                         .green-btn
                 .link-bar
                     .nav-btn
-                        img(src='img/left-arrow.svg' alt='left arrow' class='prev')
-                        img(src='img/right-arrow.svg' alt='right arrow' class='next')
+                        img.prev(src='img/left-arrow.svg' alt='left arrow')
+                        img.next(src='img/right-arrow.svg' alt='right arrow')
                     .address-bar
                 .content-pane
                     img(src='' class='hero-preview-img')
