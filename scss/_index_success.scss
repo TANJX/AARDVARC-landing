@@ -1,0 +1,102 @@
+
+.body-lock {
+  overflow: hidden;
+}
+
+$card-background-color: rgba(0, 0, 0, 0.3);
+
+.card-wrapper {
+  display: none;
+
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $card-background-color;
+
+  .contact-success-card {
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 290px;
+    width: 400px;
+    padding: 35px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: auto;
+    box-shadow: 0 7px 8px -4px rgba(0, 0, 0, .2),
+    0 12px 17px 2px rgba(0, 0, 0, .14),
+    0 5px 22px 4px rgba(0, 0, 0, .12);
+
+    h1 {
+      margin-top: 7px;
+      font-weight: 400;
+    }
+
+    p {
+      padding-top: 13px;
+    }
+
+    button {
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+      margin-top: 20px;
+      padding: 0 12px;
+      height: 35px;
+      outline: none;
+      color: #b92228;
+      border: 2px solid #b92228;
+      box-shadow: none;
+      border-radius: 4px;
+      background-color: #fff;
+
+      &:hover {
+        background-color: transparentize($primary-color, 0.9);
+      }
+    }
+
+
+    &.cardDrop {
+
+      animation-name: cardDrop;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &.fadeOut {
+    background-color: $card-background-color;
+    animation-name: cardBackgroundFadeOut;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes cardBackgroundFadeOut {
+  from {
+    background-color: $card-background-color;
+  }
+
+  to {
+    background-color: transparent;
+  }
+}
+
+
+@keyframes cardDrop {
+  from {
+    transform: translate(0, 0) rotate(0);
+  }
+
+  to {
+    transform: translate(-40px, calc(50vh + 400px)) rotate(-10deg);
+  }
+}

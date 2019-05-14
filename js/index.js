@@ -56,23 +56,32 @@ function jumpto(div) {
 (function () {
   const url = window.location.href;
   if (url.match('/success')) {
+    // correct url
     history.replaceState(null, null, url.replace('/success', ''));
-    const $card = $('.card-wrapper');
-    $card.show();
+
+    const $card_wrapper = $('.card-wrapper');
+    const $card = $card_wrapper.find('.contact-success-card');
+    $card_wrapper.show();
     const $body = $('body');
-    $body.addClass('body-shade');
-    $(document).click(function(e) {
+    $body.addClass('body-lock');
+
+    // click handler to return to index page
+    $(document).click(function (e) {
       const target = e.target;
       console.log(target);
       if (!$(target).is('.contact-success-card') && !$(target).parents().is('.contact-success-card')) {
         hide();
       }
     });
-    $card.find('button').click(() => hide());
+    $card_wrapper.find('button').click(() => hide());
 
     function hide() {
-      $card.hide();
-      $body.removeClass('body-shade');
+      $body.removeClass('body-lock');
+      $card_wrapper.addClass('fadeOut');
+      $card.addClass('cardDrop');
+      setTimeout(function () {
+        $card_wrapper.hide();
+      }, 1200);
     }
   }
 })();

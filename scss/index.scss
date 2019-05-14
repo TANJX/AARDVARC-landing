@@ -61,75 +61,7 @@
 
 @import 'index_browser';
 
-.news {
-  border-top: 1px solid #ccc;
-  margin-bottom: 70px;
-  position: relative;
-
-  .news-content {
-    width: calc(100% - 50px);
-    max-width: 750px;
-    margin: 0 auto;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    text-align: center;
-    height: 120px;
-
-    @media screen and (max-width: 470px) {
-      height: 250px;
-      width: calc(100% - 75px);
-    }
-  }
-
-  .news-date {
-    margin-top: 40px;
-    font-weight: bold;
-    text-align: center;
-    font-size: 0.85rem;
-    color: $primary-color;
-    letter-spacing: 0.133rem;
-    text-transform: uppercase;
-  }
-
-  .news-controller {
-    & > div {
-      position: absolute;
-      top: 0;
-      padding: 180px 15px;
-
-      &:hover {
-        cursor: pointer;
-
-        img {
-          filter: grayscale(80%);
-        }
-      }
-
-      &.hide:hover {
-        cursor: default;
-
-      }
-
-      &.hide {
-        opacity: 0;
-      }
-    }
-
-    .prev-news {
-      left: 0;
-    }
-
-    .next-news {
-      right: 0;
-    }
-
-    img {
-      height: 25px;
-      filter: grayscale(100%);
-      transition: .2s;
-    }
-  }
-}
+@import 'index_news';
 
 /* FEATURES */
 .features {
@@ -188,6 +120,56 @@
     font-style: italic;
     text-align: center;
     font-size: .8rem;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .features .inner-container {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 991.5px) {
+  .features .card {
+    margin: 0 5px;
+  }
+}
+
+@media screen and (max-width: 767.5px) {
+  .features .cards {
+    margin: 0 5px;
+    display: block;
+
+    .card {
+      width: 100%;
+      margin: 25px auto;
+    }
+  }
+
+  .people {
+    margin-top: 0;
+    display: block;
+  }
+
+  .person {
+    max-width: 200px;
+    margin: 25px auto;
+    text-align: center;
+
+    img {
+      width: 125px;
+      margin: 0 auto 10px;
+    }
+
+    .name {
+      margin: 0;
+      text-align: center;
+    }
+
+    .info {
+      font-size: .7rem;
+      text-align: center;
+    }
   }
 }
 
@@ -278,124 +260,4 @@
   }
 }
 
-@media screen and (max-width: 1199px) {
-  .features .inner-container {
-    margin: 0;
-  }
-}
-
-@media screen and (max-width: 991.5px) {
-  .hero {
-    display: block;
-
-    .right img {
-      width: 100%;
-    }
-  }
-
-  .features .card {
-    margin: 0 5px;
-  }
-
-}
-
-@media screen and (max-width: 767.5px) {
-  .features .cards {
-    margin: 0 5px;
-    display: block;
-
-    .card {
-      width: 100%;
-      margin: 25px auto;
-    }
-  }
-
-  .people {
-    margin-top: 0;
-    display: block;
-  }
-
-  .person {
-    max-width: 200px;
-    margin: 25px auto;
-    text-align: center;
-
-    img {
-      width: 125px;
-      margin: 0 auto 10px;
-    }
-
-    .name {
-      margin: 0;
-      text-align: center;
-    }
-
-    .info {
-      font-size: .7rem;
-      text-align: center;
-    }
-  }
-}
-
-.body-shade {
-  overflow: hidden;
-}
-
-.card-wrapper {
-  display: none;
-
-  z-index: 999;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
-
-  .contact-success-card {
-    z-index: 1000;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 290px;
-    width: 400px;
-    padding: 35px;
-    background-color: #fff;
-    border-radius: 5px;
-    margin: auto;
-    box-shadow: 0 7px 8px -4px rgba(0, 0, 0, .2),
-    0 12px 17px 2px rgba(0, 0, 0, .14),
-    0 5px 22px 4px rgba(0, 0, 0, .12);
-
-    h1 {
-      margin-top: 7px;
-      font-weight: 400;
-    }
-
-    p {
-      padding-top: 13px;
-    }
-
-    button {
-      font-weight: 500;
-      letter-spacing: 0.1rem;
-      margin-top: 20px;
-      padding: 0 12px;
-      height: 35px;
-      outline: none;
-      color: #b92228;
-      border: 2px solid #b92228;
-      box-shadow: none;
-      border-radius: 4px;
-      background-color: #fff;
-
-      &:hover {
-        background-color: transparentize($primary-color, 0.9);
-      }
-    }
-  }
-}
+@import 'index_success';
