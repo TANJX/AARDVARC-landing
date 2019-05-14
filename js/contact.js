@@ -20,16 +20,12 @@
   function submit(event) {
     console.log(event);
     event.preventDefault();
-    console.log('on submit');
     if (!form.checkValidity()) {
       return;
     }
-    console.log('yes');
     if (!validate()) {
       return;
     }
-    console.log('yes2');
-    console.log('pass');
 
     $btn.attr('disabled', true);
     $form.fadeOut(function () {

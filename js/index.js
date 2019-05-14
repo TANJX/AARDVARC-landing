@@ -16,6 +16,10 @@ function jumpto(div) {
   });
 }
 
+/*
+
+// menu scroll
+
 (function () {
   const $logo = $('header .logo-div');
   const $header = $('header.logo-header');
@@ -44,6 +48,35 @@ function jumpto(div) {
 
   // $(document).scroll(update);
 })();
+
+*/
+
+// Redirected from Contact
+
+(function () {
+  const url = window.location.href;
+  if (url.match('/success')) {
+    history.replaceState(null, null, url.replace('/success', ''));
+    const $card = $('.card-wrapper');
+    $card.show();
+    const $body = $('body');
+    $body.addClass('body-shade');
+    $(document).click(function(e) {
+      const target = e.target;
+      console.log(target);
+      if (!$(target).is('.contact-success-card') && !$(target).parents().is('.contact-success-card')) {
+        hide();
+      }
+    });
+    $card.find('button').click(() => hide());
+
+    function hide() {
+      $card.hide();
+      $body.removeClass('body-shade');
+    }
+  }
+})();
+
 
 // HERO PREVIEW
 (function () {

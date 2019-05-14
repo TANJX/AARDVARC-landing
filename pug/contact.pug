@@ -10,8 +10,8 @@ block content
     .container.main
         .left-div
             h1 Contact Us
-            p.small.text-danger CURRENTLY UNDER MAINTENANCE
-            p.small.text-danger Send us an email at aardvarc@usc.edu
+            //-p.small.text-danger CURRENTLY UNDER MAINTENANCE
+            //-p.small.text-danger Send us an email at aardvarc@usc.edu
             p Let's talk about everything!
             ul.actions
                 li
@@ -25,7 +25,7 @@ block content
                     | Arrange for a meeting
         .right-div
             h3#wait(style='display: none') Please wait a few seconds...
-            form#contact-form
+            form#contact-form(method='post', action='http://app.acadoinformatics.com/api/email', onsubmit="return validate()")
                 h3 Say Hello!
                 .line.two
                     .left
@@ -50,9 +50,18 @@ block content
                 .line.full
                     div(name='recaptcha-token' class='g-recaptcha', data-sitekey='6LchhqEUAAAAAMKBy82KyHD0h9bW4cpcMXRsrFHQ')
                 .line.full
-                    button.btn.btn-fill(id='submit') SUBMIT
+                    button.btn.btn-fill(id='submit' type='submit' name='submit') SUBMIT
 
 block contact
 block append script
     script(src='https://www.google.com/recaptcha/api.js')
-    script(src='js/contact.min.js')
+    script.
+      function validate() {
+        const val = $('#msg').val();
+        if (val.includes('http')) return false;
+        $('#submit').attr('disabled', true);
+        $('form').fadeOut(function () {
+          $('#wait').fadeIn();
+        });
+        return true;
+      }
