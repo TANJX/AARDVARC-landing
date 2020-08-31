@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c662a4d8-46f8-4265-ad14-e850a7cffe19" name="AARDVARC/ubuntu" url="http://acadoinformatics.com">
+        <fileTransfer host="acadoinformatics.com" port="22" privateKey="C:\Users\david\.ssh\id_rsa" rootFolder="/var/www/acadoinformatics.com/public_html/aardvarc" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
