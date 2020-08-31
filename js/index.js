@@ -226,6 +226,22 @@ function jumpto(div) {
       date: 'July 13, 2019 - July 17, 2019',
       content: 'Selected to present at 2019 <a rel="noreferrer" href="https://www.aacp.org/events/annual-meetings" target="_blank">AACP Annual Meeting</a> in Chicago, IL'
     },
+    {
+      date: 'February 12, 2020',
+      content: 'AARDVARC© officially receives copyright'
+    },
+    {
+      date: 'February 28, 2020',
+      content: 'Presented at the International Association of Medical Science Educators (IAMSE) in Kuala Lumpur, Malaysia'
+    },
+    {
+      date: 'July 14, 2020',
+      content: 'Presented at the 2020 AACP Annual Meeting'
+    },
+    {
+      date: 'July 13, 2020 - July 31, 2020',
+      content: 'Received Honorable Mention for the 2020 AACP Award for Excellence in Assessment'
+    },
   ];
 
   NEWS.reverse();
