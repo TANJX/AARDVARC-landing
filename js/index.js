@@ -216,7 +216,7 @@ function jumpto(div) {
     },
     {
       date: 'March 6, 2019',
-      content: 'Meeting with Ingrid Steiner, Instructional Designer at the Center for Excellence in Teaching, focused on making AARDVARC© WCAG (Web Content Accessibility Guidelines) compatible.'
+      content: 'Met with Ingrid Steiner, Instructional Designer at the Center for Excellence in Teaching, focused on making AARDVARC© WCAG (Web Content Accessibility Guidelines) compatible.'
     },
     {
       date: 'April 11, 2019',
