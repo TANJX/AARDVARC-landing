@@ -200,7 +200,7 @@ function jumpto(div) {
   const NEWS = [
     {
       date: 'February 8, 2019',
-      content: 'Presented at Center for Excellence in Teaching (CET) Instructional Design Advisory Group'
+      content: 'Presented to the Center for Excellence in Teaching (CET) Instructional Design Advisory Group'
     },
     {
       date: 'February 11, 2019',
@@ -220,15 +220,15 @@ function jumpto(div) {
     },
     {
       date: 'April 11, 2019',
-      content: 'Meeting with Mark Todd, Vice Provost for Academic Operations, Greg Condell, Vice President of Finance, and USC’s Academic Senior Business Officers to discuss how AARDVARC can be used to help inform financial/business operations'
+      content: 'Met with Mark Todd, Vice Provost for Academic Operations, Greg Condell, Vice President of Finance, and USC’s Academic Senior Business Officers to discuss how AARDVARC can be used to help inform financial/business operations'
     },
     {
       date: 'July 13, 2019 - July 17, 2019',
-      content: 'Selected to present at 2019 <a rel="noreferrer" href="https://www.aacp.org/events/annual-meetings" target="_blank">AACP Annual Meeting</a> in Chicago, IL'
+      content: 'Presented at the 2019 <a rel="noreferrer" href="https://www.aacp.org/events/annual-meetings" target="_blank">AACP Annual Meeting</a> in Chicago, IL'
     },
     {
       date: 'February 12, 2020',
-      content: 'AARDVARC© officially receives copyright'
+      content: 'Received AARDVARC<sup>&copy;</sup> copyright'
     },
     {
       date: 'February 28, 2020',
@@ -236,7 +236,7 @@ function jumpto(div) {
     },
     {
       date: 'July 14, 2020',
-      content: 'Presented at the 2020 AACP Annual Meeting'
+      content: 'Presented at the 2020 AACP Virtual Annual Meeting'
     },
     {
       date: 'July 13, 2020 - July 31, 2020',
