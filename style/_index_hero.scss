@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $hero-bg-color: #faf8f5;
 
 // HERO
@@ -146,7 +148,7 @@ $hero-bg-color: #faf8f5;
       left: 15px;
       width: $d;
       height: $d;
-      top: -$d/2;
+      top: math.div(-$d, 2);
     }
   }
 }

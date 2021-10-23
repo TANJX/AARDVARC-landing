@@ -4,7 +4,7 @@ block title
     | Contact |
 
 block style
-    link(rel='stylesheet', href='css/contact.css')
+    link(rel='stylesheet', href='style/contact.css')
 
 block content
     .container.main
@@ -25,7 +25,7 @@ block content
                     | Arrange for a meeting
         .right-div
             h3#wait(style='display: none') Please wait a few seconds...
-            form#contact-form(method='post', action='http://app.acadoinformatics.com/api/email', onsubmit="return validate()")
+            form#contact-form(method='post', action='https://app.acadoinformatics.com/api/email', onsubmit="return validate()")
                 h3 Say Hello!
                 .line.two
                     .left
