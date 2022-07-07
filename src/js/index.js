@@ -235,12 +235,28 @@ function jumpto(div) {
       content: 'Presented at the International Association of Medical Science Educators (IAMSE) in Kuala Lumpur, Malaysia'
     },
     {
+      date: 'May 20, 2020',
+      content: 'AARDVARC featured in AACP’s Spring 2020 Newsletter on Innovation Using a Web-Based Syllabus Platform for Advanced Pharmacy Practice Experiences (APPEs)'
+    },
+    {
       date: 'July 14, 2020',
       content: 'Presented at the 2020 AACP Virtual Annual Meeting'
     },
     {
       date: 'July 13, 2020 - July 31, 2020',
       content: 'Received Honorable Mention for the 2020 AACP Award for Excellence in Assessment'
+    },
+    {
+      date: 'Feb 18, 2021',
+      content: 'Presented at the Innovations in Medical Education (IME) Conference'
+    },
+    {
+      date: 'July 19, 2021 - July 22, 2021',
+      content: 'Presented at the 2021 AACP Annual Meeting'
+    },   
+    {
+      date: 'November 30, 2021',
+      content: 'AARDVARC featured in the International Journal of Educational Management (IJEM)'
     },
   ];
 
