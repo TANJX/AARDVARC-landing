@@ -59,6 +59,7 @@ block append script
       function validate() {
         const val = $('#msg').val();
         if (val.includes('http')) return false;
+        if (/[а-яА-ЯЁё]/.test(val)) return false;
         $('#submit').attr('disabled', true);
         $('form').fadeOut(function () {
           $('#wait').fadeIn();

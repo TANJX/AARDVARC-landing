@@ -1,3 +1,8 @@
+/**
+ * This script in UNUSED!
+ */
+
+
 (function () {
   const post_url = 'http://localhost/api/email';
 
@@ -14,6 +19,11 @@
     if ($msg.val().includes('http')) {
       return false;
     }
+    // if there is a cyrillic alphabet, return false
+    if (/[а-яА-ЯЁё]/.test($msg.val())) {
+      return false;
+    }
+    return false;
     return $recaptcha.val() !== '';
   }
 
